@@ -1,0 +1,8 @@
+/* Шапка и подвал — vendor/site.css, vendor/site.js. Здесь только ограничения прототипа. */
+/* Корзина: оформление заказа — вне прототипа подбора */
+#pm-cart-form, .pm-cart__footer form, .pm-cart-form { display: none !important; }
+
+
+/* WebKit (Safari, Chrome на iOS, Telegram): text-rendering: optimizeLegibility / geometricPrecision из стилей шапки
+   отключает оси вариативного Roboto Flex — шрифт рисуется тонким. В Chrome/Blink визуально ничего не меняется. */
+html body, html body *, html body *::before, html body *::after { text-rendering: auto !important; }

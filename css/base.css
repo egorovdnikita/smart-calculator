@@ -1,0 +1,118 @@
+/* База: шрифты-роли, раскладка секций, кнопки, бейджи, линии-индикаторы, иконки. */
+html, body { overflow-x: clip !important; } /* site.css ставит hidden → ломает sticky */
+html { scrollbar-gutter: stable; }
+
+.tlsc-root { display: block; background: var(--tlsc-surface); color: var(--tlsc-text); font-family: var(--tlsc-font); font-size: var(--tlsc-body-m); line-height: var(--tlsc-body-m-lh); letter-spacing: var(--tlsc-ls); }
+.tlsc-root *, .tlsc-root *::before, .tlsc-root *::after { box-sizing: border-box; }
+/* Roboto Flex — вариативный: WebKit (Safari, Chrome на iOS, Telegram) может не переводить font-weight в ось wght
+   и рисует тонкое начертание по умолчанию. Толщина задаётся осью явно, как в стилях шапки; Inter (не вариативный) это игнорирует. */
+/* Ось задаётся каждому элементу напрямую (без расчёта на наследование). На iOS (Safari, Chrome, Telegram — WebKit без
+   «утолщения» текста, как в macOS) 700 выглядит светлее дизайна — там 750, выбрано на iPhone. Класс is-ios ставит скрипт в <head>. */
+.tlsc-root { --tlsc-wght: 700; }
+html.is-ios .tlsc-root { --tlsc-wght: 750; }
+@supports (-webkit-touch-callout: none) { .tlsc-root { --tlsc-wght: 750; } }
+.tlsc-root, .tlsc-root *, .tlsc-root *::before, .tlsc-root *::after { font-variation-settings: "wght" var(--tlsc-wght); }
+.tlsc-root :is(h1, h2, h3, p, figure, fieldset, legend) { margin: 0; }
+.tlsc-root :is(em, i) { font-style: normal; }
+.tlsc-root img { display: block; max-width: 100%; }
+.tlsc-root button { font: inherit; color: inherit; letter-spacing: inherit; }
+.tlsc-root [hidden] { display: none !important; }
+.tlsc-root :focus-visible { outline: 2px solid var(--tlsc-border-strong); outline-offset: 2px; }
+.tlsc-sr { position: absolute !important; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Display-шрифт (Roboto Flex compressed italic, 700) */
+.tlsc-title, .tlsc-section-title, .tlsc-result__heading h2, .tlsc-match__value, .tlsc-price__main strong, .tlsc-budget__value,
+.tlsc-metric__value b, .tlsc-journey-step__count strong, .tlsc-journey-finalists__title, .tlsc-journey-finalist__copy strong,
+.tlsc-journey-result h3, .tlsc-journey-result__price, .tlsc-journey-result__match-row strong, .tlsc-territory__word,
+.tlsc-territory__model strong, .tlsc-territory__statement strong, .tlsc-root .tlsc-btn, .tlsc-tabs button {
+  font-family: var(--tlsc-font-display); font-style: italic; font-weight: 700;
+}
+.tlsc-title, .tlsc-section-title { font-size: var(--tlsc-display-s); line-height: var(--tlsc-display-s-lh); letter-spacing: var(--tlsc-display-s-ls); }
+
+/* Секции */
+.tlsc-shell { padding: var(--tlsc-s-72) 0; }
+.tlsc-workspace { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--tlsc-s-32); align-items: start; }
+@media (min-width: 1200px) {
+  /* Дизайн 1440 и 1920: [заголовок + параметры] | разделитель | рекомендация. Колонка параметров: контент 432 (1440) → 514 (1920) + 33 */
+  .tlsc-workspace { grid-template-columns: calc(var(--tlsc-left) + 33px) minmax(0, 1fr); grid-template-rows: auto 1fr; grid-template-areas: 'title result' 'controls result'; column-gap: 32px; row-gap: var(--tlsc-s-24); }
+  .tlsc-workspace > .tlsc-title { grid-area: title; }
+  .tlsc-controls { grid-area: controls; padding-right: 33px; }
+  .tlsc-result { grid-area: result; position: relative; }
+  .tlsc-result::before { content: ''; position: absolute; top: 0; bottom: 0; left: -32px; width: 1px; background: var(--tlsc-border); } /* разделитель колонок */
+}
+
+/* Кнопки 56px (Button / primary, neutral) */
+.tlsc-root .tlsc-btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--tlsc-s-8); min-height: var(--tlsc-btn-h); padding: 0 var(--tlsc-s-24); margin: 0;
+  border: 0; border-radius: 0; font-size: var(--tlsc-body-m); line-height: var(--tlsc-body-m-lh); letter-spacing: var(--tlsc-ls); text-transform: uppercase; text-decoration: none; color: var(--tlsc-text); white-space: nowrap; cursor: pointer;
+  transition: background-color var(--tlsc-dur), opacity var(--tlsc-dur); }
+.tlsc-root .tlsc-btn--primary { background: var(--tlsc-accent); }
+.tlsc-root .tlsc-btn--primary:hover { background: var(--tlsc-accent-hover); }
+.tlsc-root .tlsc-btn--neutral { background: var(--tlsc-control); }
+.tlsc-root .tlsc-btn--neutral:hover { background: var(--tlsc-control-hover); }
+.tlsc-root .tlsc-btn:active:not(:disabled), .tlsc-square-btn:active { opacity: 0.8; } /* State=Active */
+.tlsc-root .tlsc-btn:is(:disabled, [aria-disabled='true']) { opacity: 0.4; cursor: not-allowed; }
+.tlsc-root .tlsc-btn.is-added { background: var(--tlsc-text); color: var(--tlsc-surface); }
+.tlsc-root .tlsc-btn span { font: inherit; color: inherit; }
+.tlsc-square-btn { display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border: 0; background: var(--tlsc-control); cursor: pointer; }
+.tlsc-square-btn:hover { background: var(--tlsc-control-hover); }
+
+/* Бейдж 24px (Badge) */
+.tlsc-badge { display: inline-flex; align-items: center; gap: var(--tlsc-s-4); height: var(--tlsc-badge-h); padding: 0 var(--tlsc-s-8); background: var(--tlsc-surface-muted); border: 1px solid var(--tlsc-border);
+  font-size: var(--tlsc-body-s); line-height: var(--tlsc-body-s-lh); letter-spacing: var(--tlsc-body-s-ls); font-weight: 500; white-space: nowrap; }
+.tlsc-badge--accent { padding-left: var(--tlsc-s-4); background: var(--tlsc-accent); border: 0; }
+.tlsc-badge :is(em, span) { font: inherit; }
+
+/* Логотип бренда в плашке (Logo); без логотипа — название бренда текстом */
+.tlsc-brandmark { display: inline-flex; align-items: center; }
+.tlsc-brandmark__logo { display: inline-flex; align-items: center; height: var(--tlsc-badge-h); padding: 0 16px; overflow: hidden; background: var(--tlsc-surface-muted); border-radius: 4px; }
+/* PNG логотипов каталога с широкими полями: 30px по высоте ≈ 92×12 видимого логотипа, как в дизайне */
+.tlsc-brandmark__logo img { height: 30px; width: auto; max-width: 140px; max-height: none; object-fit: contain; }
+.tlsc-brandmark__text { display: none; font-size: var(--tlsc-body-s); line-height: var(--tlsc-body-s-lh); font-weight: 500; color: var(--tlsc-text-secondary); text-transform: uppercase; }
+.tlsc-brandmark:has(.tlsc-brandmark__logo[hidden], img:not([src]), img[src='']) .tlsc-brandmark__logo { display: none; }
+.tlsc-brandmark:has(.tlsc-brandmark__logo[hidden], img:not([src]), img[src='']) .tlsc-brandmark__text { display: inline; }
+
+/* Иконки из дизайна (маски, цвет = currentColor) */
+.tlsc-ic { display: inline-block; flex: none; width: 24px; height: 24px; background: currentColor; -webkit-mask: var(--ic) center / 24px 24px no-repeat; mask: var(--ic) center / 24px 24px no-repeat; }
+.tlsc-ic--check { --ic: url('../assets/icons/check.svg'); }
+.tlsc-ic--up { --ic: url('../assets/icons/arrow-up.svg'); }
+.tlsc-ic--down { --ic: url('../assets/icons/arrow-down.svg'); }
+
+/* Линии (Line) — как в дизайне: квадрат 4×4 · зазор 4 · заливка · зазор 4 · бегунок 4×12 · зазор 4 · остаток · зазор 4 · квадрат 4×4.
+   Зазоры вокруг бегунка — его тень цвета фона. */
+.tlsc-root { --tlsc-track:
+  linear-gradient(var(--tlsc-line), var(--tlsc-line)) 0 50% / 4px 4px no-repeat,
+  linear-gradient(var(--tlsc-line), var(--tlsc-line)) 100% 50% / 4px 4px no-repeat,
+  linear-gradient(var(--tlsc-line), var(--tlsc-line)) 8px 50% / calc(100% - 16px) 4px no-repeat; }
+.tlsc-thumb { position: absolute; top: 0; width: 4px; height: 12px; background: var(--tlsc-black); box-shadow: -4px 0 0 var(--tlsc-bg, var(--tlsc-surface)), 4px 0 0 var(--tlsc-bg, var(--tlsc-surface)); }
+/* Информационный прогресс (метрики «Почему подходит», профиль) — не кликабельный: вместо чёрного бегунка серый квадрат 4×4,
+   чтобы не путать с ползунками. <i><b style="width|--value"></b></i> */
+.tlsc-metric > i, .tlsc-profile-stat i { position: relative; display: block; height: 4px; background: var(--tlsc-track); }
+.tlsc-metric > i b, .tlsc-profile-stat i b { position: absolute; left: 0; top: 0; bottom: 0; min-width: 0; max-width: 100%;
+  background: linear-gradient(var(--tlsc-accent), var(--tlsc-accent)) 8px 0 / calc(100% - 16px) 4px no-repeat; }
+.tlsc-metric > i b::after, .tlsc-profile-stat i b::after { content: ''; position: absolute; top: 0; right: min(0px, calc(100% - 4px)); width: 4px; height: 4px;
+  background: linear-gradient(var(--tlsc-line), var(--tlsc-line)), var(--tlsc-bg, var(--tlsc-surface));
+  box-shadow: -4px 0 0 var(--tlsc-bg, var(--tlsc-surface)), 4px 0 0 var(--tlsc-bg, var(--tlsc-surface)); }
+/* Индикатор совпадения без бегунка: квадрат · заливка · зазор · остаток · квадрат */
+.tlsc-line { position: relative; height: 4px; background: var(--tlsc-track); }
+.tlsc-line::before { content: ''; position: absolute; left: 8px; top: 0; height: 4px; width: calc((100% - 16px) * var(--match, 0) / 100 - 4px); background: var(--tlsc-accent);
+  box-shadow: 4px 0 0 var(--tlsc-bg, var(--tlsc-surface)); }
+
+/* Фото в рамках карточек вписываются целиком, без обрезки */
+.tlsc-compare-card__image, .tlsc-journey-result__image, .tlsc-journey-finalist__media, .tlsc-accessory__media { position: relative; }
+.tlsc-root :is(.tlsc-compare-card__image, .tlsc-journey-result__image, .tlsc-journey-finalist__media, .tlsc-accessory__media) img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: contain; }
+
+/* Смена модели и reduced motion */
+/* анимации — css/motion.css */
+@media (prefers-reduced-motion: reduce) { .tlsc-root *, .tlsc-root *::before, .tlsc-root *::after { animation: none !important; transition: none !important; } }
+
+/* Служебные узлы логики подбора, которых нет в дизайне */
+.tlsc-stage__counter, .tlsc-market-mini, .tlsc-precision__head, .tlsc-journey-step__cloud, .tlsc-journey-result__word { display: none !important; }
+
+/* Стрелки галереи в дизайне — повёрнутая на 90° иконка */
+.tlsc-ic--up, .tlsc-ic--down { transform: rotate(90deg); }
+/* cart.css стилизует .product-detail__cart — возвращаем вид кнопки из дизайна */
+.tlsc-root .tlsc-btn.product-detail__cart, .tlsc-root .tlsc-btn .product-detail__cart-text {
+  font-family: var(--tlsc-font-display); font-style: italic; font-weight: 700; font-size: var(--tlsc-body-m); line-height: var(--tlsc-body-m-lh); letter-spacing: var(--tlsc-ls); text-transform: uppercase; color: var(--tlsc-text);
+}
+.tlsc-root .tlsc-btn.product-detail__cart { height: var(--tlsc-btn-h); border-radius: 0; box-shadow: none; }
+.tlsc-root .tlsc-btn.product-detail__cart.is-added, .tlsc-root .tlsc-btn.product-detail__cart.is-added .product-detail__cart-text { background: var(--tlsc-text); color: var(--tlsc-surface); }

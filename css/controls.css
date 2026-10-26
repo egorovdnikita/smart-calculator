@@ -1,0 +1,86 @@
+/* Левая колонка «Подбор техники». */
+.tlsc-controls { display: flex; flex-direction: column; gap: var(--tlsc-s-24); min-width: 0; }
+
+/* Параметр: подпись + чипы */
+.tlsc-control { display: flex; flex-direction: column; gap: var(--tlsc-s-12); }
+.tlsc-control__title { font-weight: 500; color: var(--tlsc-text-secondary); }
+.tlsc-options { display: flex; flex-wrap: wrap; gap: var(--tlsc-s-8); }
+.tlsc-option { position: relative; display: inline-flex; cursor: pointer; }
+.tlsc-option input { position: absolute; inset: 0; margin: 0; opacity: 0; cursor: pointer; }
+.tlsc-option span { display: inline-flex; align-items: center; min-height: 40px; padding: var(--tlsc-s-8) var(--tlsc-s-12); border: 1px solid var(--tlsc-border); font-weight: 500; white-space: nowrap;
+  transition: background-color var(--tlsc-dur), border-color var(--tlsc-dur); }
+.tlsc-option input:checked + span { background: var(--tlsc-accent); border-color: var(--tlsc-accent); }
+.tlsc-option input:focus-visible + span { outline: 2px solid var(--tlsc-border-strong); outline-offset: 2px; }
+/* Дизайн 1440 (и до 1920): чипы 36px, текст 14/18 — каждая группа в одну строку */
+@media (max-width: 1919px) { .tlsc-option span { min-height: 36px; padding: 8px; font-size: var(--tlsc-body-s); line-height: var(--tlsc-body-s-lh); letter-spacing: var(--tlsc-body-s-ls); } }
+
+/* Бюджет */
+.tlsc-budget { display: flex; flex-direction: column; padding: var(--tlsc-s-4); background: var(--tlsc-surface-muted); }
+.tlsc-budget__market { padding: var(--tlsc-s-4) var(--tlsc-s-12) var(--tlsc-s-8); font-weight: 500; }
+.tlsc-budget__box { display: flex; flex-direction: column; gap: var(--tlsc-s-12); padding: var(--tlsc-s-16); background: var(--tlsc-surface); }
+.tlsc-budget__value { font-size: var(--tlsc-h4); line-height: var(--tlsc-h4-lh); letter-spacing: var(--tlsc-h4-ls); }
+.tlsc-budget__labels { display: grid; grid-template-columns: repeat(3, 1fr); font-weight: 500; color: var(--tlsc-text-secondary); white-space: nowrap; }
+.tlsc-budget__labels span:nth-child(2) { text-align: center; }
+.tlsc-budget__labels span:nth-child(3) { text-align: right; }
+
+/* Ползунки в стиле Line: квадрат · зазор · заливка · зазор · бегунок 4×12 · зазор · остаток · зазор · квадрат */
+.tlsc-budget__track { position: relative; }
+.tlsc-root input.tlsc-range, .tlsc-budget input[type='range'] { -webkit-appearance: none; appearance: none; display: block; width: 100%; height: 12px; margin: 0; padding: 0; border: 0; cursor: pointer; background: var(--tlsc-track); }
+.tlsc-budget input[type='range'] { background: linear-gradient(var(--tlsc-accent), var(--tlsc-accent)) 8px 50% / calc(var(--progress, 0%) - 12px) 4px no-repeat, var(--tlsc-track); }
+.tlsc-root :is(input.tlsc-range, .tlsc-budget input[type='range'])::-webkit-slider-runnable-track { height: 12px; background: none; }
+.tlsc-root :is(input.tlsc-range, .tlsc-budget input[type='range'])::-moz-range-track { height: 12px; background: none; }
+.tlsc-root :is(input.tlsc-range, .tlsc-budget input[type='range'])::-webkit-slider-thumb { -webkit-appearance: none; width: 4px; height: 12px; border: 0; border-radius: 0; background: var(--tlsc-black);
+  box-shadow: -4px 0 0 var(--tlsc-bg, var(--tlsc-surface)), 4px 0 0 var(--tlsc-bg, var(--tlsc-surface)); }
+.tlsc-root :is(input.tlsc-range, .tlsc-budget input[type='range'])::-moz-range-thumb { width: 4px; height: 12px; border: 0; border-radius: 0; background: var(--tlsc-black);
+  box-shadow: -4px 0 0 var(--tlsc-bg, var(--tlsc-surface)), 4px 0 0 var(--tlsc-bg, var(--tlsc-surface)); }
+.tlsc-root :is(input.tlsc-range, .tlsc-budget input[type='range']):focus-visible { outline: 2px solid var(--tlsc-border-strong); outline-offset: 4px; }
+
+/* Экспертные настройки */
+.tlsc-refine { display: flex; flex-direction: column; gap: var(--tlsc-s-24); padding-top: var(--tlsc-s-24); border-top: 1px solid var(--tlsc-border); }
+.tlsc-precision-toggle { display: flex; align-items: center; gap: var(--tlsc-s-8); width: 100%; min-height: 24px; padding: 0; border: 0; background: none; text-align: left; cursor: pointer; }
+.tlsc-precision-toggle__title { font-size: var(--tlsc-body-l); line-height: var(--tlsc-body-l-lh); font-weight: 600; }
+.tlsc-counter { display: inline-grid; place-items: center; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 20px; background: var(--tlsc-negative); color: #fff;
+  font-size: var(--tlsc-caption); line-height: var(--tlsc-caption-lh); letter-spacing: -0.3px; }
+.tlsc-precision-toggle__chev { width: 24px; height: 24px; margin-left: auto; background: currentColor;
+  -webkit-mask: url('../assets/icons/chevron-down.svg') center / 24px no-repeat; mask: url('../assets/icons/chevron-down.svg') center / 24px no-repeat; }
+.tlsc-precision-toggle[aria-expanded='true'] .tlsc-precision-toggle__chev { -webkit-mask-image: url('../assets/icons/chevron-up.svg'); mask-image: url('../assets/icons/chevron-up.svg'); }
+.tlsc-precision:not(.is-open) { display: none; }
+.tlsc-precision { display: flex; flex-direction: column; gap: var(--tlsc-s-24); }
+
+/* Приоритеты: ползунок на 3 позиции (Не важно · Важно · Максимум) поверх исходных радиокнопок.
+   Трек: квадрат · отрезок · квадрат по центру · отрезок · квадрат; до бегунка — акцент */
+.tlsc-priorities { display: flex; flex-direction: column; gap: var(--tlsc-s-12); }
+.tlsc-priority-scale, .tlsc-priority__choices { width: min(360px, calc(100% - 128px)); margin-left: auto; } /* слева место под «Проходимость» */
+.tlsc-priority-scale { display: grid; grid-template-columns: repeat(3, 1fr); font-weight: 500; white-space: nowrap; }
+.tlsc-priority-scale span:nth-child(2) { text-align: center; }
+.tlsc-priority-scale span:nth-child(3) { text-align: right; }
+.tlsc-priority { position: relative; display: block; min-height: 22px; margin: 0; padding: 0; border: 0; min-width: 0; }
+.tlsc-priority legend { float: left; padding: 0; line-height: 22px; font-weight: 500; color: var(--tlsc-text-secondary); white-space: nowrap; }
+.tlsc-priority__choices { position: absolute; right: 0; top: 5px; } /* дорожка прижата вправо под шкалой, как в дизайне */
+.tlsc-priority__choices label { display: none; } /* значения хранят исходные радиокнопки; управляет ползунок */
+.tlsc-root input.tlsc-range--priority { background:
+  linear-gradient(var(--tlsc-seg1, var(--tlsc-line)), var(--tlsc-seg1, var(--tlsc-line))) 8px 50% / calc(50% - 14px) 4px no-repeat,
+  linear-gradient(var(--tlsc-seg2, var(--tlsc-line)), var(--tlsc-seg2, var(--tlsc-line))) calc(100% - 8px) 50% / calc(50% - 14px) 4px no-repeat,
+  linear-gradient(var(--tlsc-line), var(--tlsc-line)) 50% 50% / 4px 4px no-repeat,
+  linear-gradient(var(--tlsc-line), var(--tlsc-line)) 0 50% / 4px 4px no-repeat,
+  linear-gradient(var(--tlsc-line), var(--tlsc-line)) 100% 50% / 4px 4px no-repeat; }
+.tlsc-root input.tlsc-range--priority[data-value='1'], .tlsc-root input.tlsc-range--priority[data-value='2'] { --tlsc-seg1: var(--tlsc-accent); }
+.tlsc-root input.tlsc-range--priority[data-value='2'] { --tlsc-seg2: var(--tlsc-accent); }
+
+/* Бренд + чекбоксы */
+.tlsc-precision__row { display: flex; flex-direction: column; gap: var(--tlsc-s-16); }
+.tlsc-select { display: block; }
+.tlsc-select select { -webkit-appearance: none; appearance: none; width: 100%; height: 48px; padding: 0 48px 0 16px; border: 0; border-radius: 0; font: inherit; font-weight: 400; color: var(--tlsc-text); cursor: pointer;
+  background: var(--tlsc-control) url('../assets/icons/chevron-down.svg') right 16px center / 24px no-repeat; transition: background-color var(--tlsc-dur); }
+.tlsc-select select:hover { background-color: var(--tlsc-control-hover); }
+.tlsc-select select:has(option[value='']:checked) { color: var(--tlsc-text-tertiary); }
+.tlsc-checks { display: grid; grid-template-columns: 1fr 1fr; gap: var(--tlsc-s-8); }
+.tlsc-check { position: relative; display: flex; align-items: center; gap: var(--tlsc-s-8); min-height: 24px; cursor: pointer; }
+.tlsc-check input { position: absolute; inset: 0; width: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.tlsc-check i { flex: none; position: relative; width: 24px; height: 24px; }
+.tlsc-check i::before { content: ''; position: absolute; inset: 3px; background: var(--tlsc-control); border: 1px solid var(--tlsc-border); }
+.tlsc-check input:checked + i::before { border: 0; background: url('../assets/icons/checkbox-checked.svg') center / 18px no-repeat; }
+.tlsc-check:hover i::before { background-color: var(--tlsc-control-hover); }
+.tlsc-check:hover input:checked + i::before { background-color: transparent; filter: brightness(0.93); } /* #d2ff00 → ≈#c2eb00 (Hover, Checked) */
+.tlsc-check input:focus-visible + i { outline: 2px solid var(--tlsc-border-strong); outline-offset: 1px; }
+.tlsc-check span { font-weight: 400; }

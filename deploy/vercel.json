@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/upload/:path*", "destination": "https://turbolemons.ru/upload/:path*", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/local/cart/ajax/submit.php", "destination": "/__blocked-in-prototype" },
+    { "source": "/local/cart/ajax/hit.php", "destination": "/__blocked-in-prototype" },
+    { "source": "/", "has": [{ "type": "query", "key": "tlsc_api" }], "destination": "https://turbolemons.ru/smart-calculator/" },
+    { "source": "/", "destination": "/app.html" },
+    { "source": "/local/:path*", "destination": "https://turbolemons.ru/local/:path*" },
+    { "source": "/bitrix/:path*", "destination": "https://turbolemons.ru/bitrix/:path*" }
+  ],
+  "headers": [
+    { "source": "/local/(.*)\\.(woff2|ttf|svg|png)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }] }
+  ]
+}

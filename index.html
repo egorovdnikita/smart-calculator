@@ -1,0 +1,3505 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Подбор техники | Turbolemons</title>
+<script>/* iPhone/iPad (включая iPadOS в режиме «десктоп»): толщина Roboto Flex 750 — см. css/base.css */
+if (/iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) document.documentElement.classList.add('is-ios');</script>
+<!-- Сайт (шапка/подвал) -->
+<link rel="preload" href="assets/fonts/roboto-flex-compressed-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="vendor/site.css">
+<link rel="stylesheet" href="vendor/cart.css">
+<link rel="stylesheet" href="css/site.css">
+<!-- Калькулятор — визуальный слой -->
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/controls.css">
+<link rel="stylesheet" href="css/result.css">
+<link rel="stylesheet" href="css/journey.css">
+<link rel="stylesheet" href="css/territory.css">
+<link rel="stylesheet" href="css/passport.css">
+<link rel="stylesheet" href="css/mobile.css">
+<link rel="stylesheet" href="css/motion.css">
+</head>
+<body>
+<!-- ===== SITE HEADER ===== -->
+<!-- ==========================================================================
+     HEADER
+     ========================================================================== -->
+
+<div
+    class="header">
+
+    <div class="header__container container">
+
+
+        <!-- ==================================================================
+             TOP
+             ================================================================== -->
+
+<div class="header__top">
+
+    <div
+        class="header__top-left"
+        aria-hidden="true">
+    </div>
+
+    <nav class="header__nav">
+
+        <a href="/about/">
+            О компании
+        </a>
+
+        <a href="/delivery/">
+            Доставка и оплата
+        </a>
+
+        
+        <a href="/blog/">
+            Блог
+        </a>
+
+        <a href="/contacts/">
+            Контакты
+        </a>
+
+        <a
+            href="/blog/turbolemons-racing-team/"
+            class="header__nav-racing">
+
+            <span
+                class="header__nav-racing-icon"
+                aria-hidden="true">
+
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_4409_20636" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.73167 5.77133L5.66953 9.91436C4.3848 11.6526 3.74244 12.5217 4.09639 13.205C4.10225 13.2164 4.10829 13.2276 4.1145 13.2387C4.48945 13.9117 5.59888 13.9117 7.81775 13.9117C9.05079 13.9117 9.6673 13.9117 10.054 14.2754L10.074 14.2946L13.946 9.72466L13.926 9.70541C13.5474 9.33386 13.5474 8.74151 13.5474 7.55682V7.24712C13.5474 3.96249 13.5474 2.32018 12.6241 2.03721C11.7007 1.75425 10.711 3.09327 8.73167 5.77133Z" fill="black"/>
+<path opacity="0.5" d="M10.4527 16.4432L10.4527 16.7528C10.4527 20.0374 10.4527 21.6798 11.376 21.9627C12.2994 22.2457 13.2891 20.9067 15.2685 18.2286L18.3306 14.0856C19.6154 12.3474 20.2577 11.4783 19.9038 10.7949C19.8979 10.7836 19.8919 10.7724 19.8857 10.7613C19.5107 10.0883 18.4013 10.0883 16.1824 10.0883C14.9494 10.0883 14.3329 10.0883 13.9462 9.72461L10.0742 14.2946C10.4528 14.6661 10.4527 15.2585 10.4527 16.4432Z" fill="black"/>
+</mask>
+<g mask="url(#mask0_4409_20636)">
+<rect width="24" height="24" fill="#171717"/>
+</g>
+</svg>
+
+            </span>
+
+            <span>
+                TurboLemons Racing Team
+            </span>
+
+        </a>
+
+    </nav>
+
+    <div class="header__top-right">
+
+        <a
+            href="tel:+78003011733"
+            class="header__phone">
+
+            +7 (800) 301-17-33
+
+        </a>
+
+    </div>
+
+</div>
+
+        <!-- ==================================================================
+             BOTTOM
+             ================================================================== -->
+
+        <div class="header__bottom">
+
+
+            <!-- ==============================================================
+                 LEFT
+                 ============================================================== -->
+
+            <div class="header__left">
+
+
+                <!-- ==========================================================
+                     LOGO
+                     ========================================================== -->
+
+                <a
+                    href="/"
+                    class="header__logo">
+
+                    <img
+                        class="header__logo-dark"
+                        src="/local/templates/turbolemons-template/img/logo-dark.svg"
+                        alt="TurboLemons">
+
+                    <img
+                        class="header__logo-light"
+                        src="/local/templates/turbolemons-template/img/logo-color.svg"
+                        alt="TurboLemons">
+
+                </a>
+
+
+                <!-- ==========================================================
+                     CATALOG
+                     ========================================================== -->
+
+                <button
+                    id="header-catalog-btn"
+                    class="header__catalog"
+                    type="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-controls="mega-menu">
+
+                    <span class="header__catalog-icon">
+
+                        <img
+                            class="header__catalog-icon-burger"
+                            src="/local/templates/turbolemons-template/img/burger.svg"
+                            alt="">
+
+                        <span
+                            class="header__catalog-icon-close"
+                            aria-hidden="true">
+
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_260_113422" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path d="M15.7122 16.773L7.22693 8.28777C6.93702 7.99786 6.93702 7.51286 7.22693 7.23179C7.51684 6.94188 8.00184 6.94188 8.28291 7.23179L16.7682 15.7171C17.0581 16.007 17.0581 16.492 16.7682 16.773C16.4783 17.0629 15.9933 17.0629 15.7122 16.773Z" fill="black"/>
+<path d="M7.22706 16.773C6.93715 16.4831 6.93715 15.9981 7.22706 15.717L15.7124 7.23167C16.0023 6.94176 16.4873 6.94176 16.7683 7.23167C17.0582 7.52158 17.0582 8.00658 16.7683 8.28765L8.28298 16.773C7.99307 17.0629 7.50807 17.0629 7.22706 16.773Z" fill="black"/>
+</mask>
+<g mask="url(#mask0_260_113422)">
+<rect width="24" height="24" fill="#171717"/>
+</g>
+</svg>
+
+                        </span>
+
+                    </span>
+
+                    <span class="header__catalog-text">
+                        Каталог
+                    </span>
+
+                </button>
+
+            </div>
+
+
+ <!-- ==============================================================
+     SEARCH
+     ============================================================== -->
+
+<form
+    id="header-search-form"
+    class="header__search"
+    action="/search/"
+    method="get"
+    role="search"
+    autocomplete="off">
+
+    <button
+        id="header-search-button"
+        class="header__search-btn"
+        type="submit"
+        aria-label="Поиск">
+
+        <img
+            class="header__search-icon-dark"
+            src="/local/templates/turbolemons-template/img/search.svg"
+            alt="">
+
+        <img
+            class="header__search-icon-white"
+            src="/local/templates/turbolemons-template/img/search-white.svg"
+            alt="">
+
+    </button>
+
+    <input
+        id="header-search-input"
+        class="header__search-input"
+        type="search"
+        name="q"
+        placeholder="Найти на Turbolemons"
+        autocomplete="off"
+        autocapitalize="off"
+        spellcheck="false"
+        aria-label="Поиск"
+        aria-controls="header-search-live"
+        aria-expanded="false">
+
+    <button
+        id="header-search-clear"
+        class="header__search-clear"
+        type="button"
+        aria-label="Очистить поиск"
+        hidden>
+        ×
+    </button>
+
+</form>
+
+            <!-- ==============================================================
+                 ACTIONS
+                 ============================================================== -->
+
+<div class="header__actions">
+
+    <!-- ПОДБОР ЗАПЧАСТЕЙ -->
+
+    <!-- <a
+        href="#"
+        class="header__parts">
+
+        <span class="header__parts-text">
+            Подбор запчастей
+        </span>
+
+    </a> -->
+
+
+    <!-- КОРЗИНА -->
+
+    <button
+        id="pm-cart-open"
+        type="button"
+        class="header__action header__action--cart"
+        aria-label="Корзина">
+
+        <span class="header__action-icon">
+
+            <img
+                class="header__cart-dark"
+                src="/local/templates/turbolemons-template/img/cart.svg"
+                alt="">
+
+            <img
+                class="header__cart-white"
+                src="/local/templates/turbolemons-template/img/cart-white.svg"
+                alt="">
+
+        </span>
+
+        <span
+            id="pm-cart-badge"
+            class="header__badge"
+            style="display:none;">
+
+            0
+
+        </span>
+
+    </button>
+
+
+    <!-- МЕССЕНДЖЕРЫ -->
+
+    <div class="header__messengers">
+
+        <!-- MAX -->
+
+        <a
+            href="#"
+            class="header__action header__action--max"
+            aria-label="MAX">
+
+            <span class="header__action-icon">
+
+                <img
+                    class="header__max-dark"
+                    src="/local/templates/turbolemons-template/img/max.svg"
+                    alt="">
+
+                <img
+                    class="header__max-white"
+                    src="/local/templates/turbolemons-template/img/max-white.svg"
+                    alt="">
+
+                <img
+                    class="header__max-color"
+                    src="/local/templates/turbolemons-template/img/max-color.svg"
+                    alt="">
+
+            </span>
+
+        </a>
+
+
+        <!-- TELEGRAM -->
+
+        <a
+            href="https://t.me/turbolemons_bot"
+            class="header__action header__action--telegram"
+            aria-label="Telegram">
+
+            <span class="header__action-icon">
+
+                <img
+                    class="header__telegram-dark"
+                    src="/local/templates/turbolemons-template/img/telegram.svg"
+                    alt="">
+
+                <img
+                    class="header__telegram-white"
+                    src="/local/templates/turbolemons-template/img/telegram-white.svg"
+                    alt="">
+
+                <img
+                    class="header__telegram-color"
+                    src="/local/templates/turbolemons-template/img/tg-color.svg"
+                    alt="">
+
+            </span>
+
+        </a>
+
+    </div>
+
+</div>
+    </div>
+</div>
+</div>
+<!-- ==========================================================================
+     LIVE SEARCH
+     ========================================================================== -->
+
+<div
+    id="header-search-live"
+    class="header-search-live"
+    hidden>
+
+    <div
+        id="header-search-overlay"
+        class="header-search-live__overlay">
+    </div>
+
+    <div
+        class="header-search-live__panel"
+        role="dialog"
+        aria-label="Поиск по сайту">
+
+        <!-- Мобильная строка поиска -->
+        <div class="header-search-live__mobile-head">
+
+            <form
+                id="header-search-mobile-form"
+                class="header-search-live__mobile-form"
+                action="/search/"
+                method="get">
+
+                <span
+                    class="header-search-live__mobile-icon"
+                    aria-hidden="true">
+
+                    <img
+                        src="/local/templates/turbolemons-template/img/search.svg"
+                        alt="">
+
+                </span>
+
+                <input
+                    id="header-search-mobile-input"
+                    class="header-search-live__mobile-input"
+                    type="search"
+                    name="q"
+                    placeholder="Найти на Turbolemons"
+                    autocomplete="off"
+                    autocapitalize="off"
+                    spellcheck="false">
+
+                <button
+                    id="header-search-mobile-clear"
+                    class="header-search-live__mobile-clear"
+                    type="button"
+                    aria-label="Очистить">
+                    ×
+                </button>
+
+            </form>
+
+            <button
+                id="header-search-close"
+                class="header-search-live__close"
+                type="button"
+                aria-label="Закрыть поиск">
+
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="header-search-content"
+            class="header-search-live__content">
+
+            <!-- Начальное состояние -->
+            <div
+                id="header-search-hint"
+                class="header-search-live__state">
+
+                Начните вводить название техники, бренда или модели
+
+            </div>
+
+
+            <!-- Загрузка -->
+            <div
+                id="header-search-loading"
+                class="header-search-live__state header-search-live__state--loading"
+                hidden>
+
+                <span class="header-search-live__loader"></span>
+
+                <span>
+                    Ищем товары
+                </span>
+
+            </div>
+
+
+            <!-- Ничего не найдено -->
+            <div
+                id="header-search-empty"
+                class="header-search-live__state"
+                hidden>
+
+                <strong>
+                    Ничего не найдено
+                </strong>
+
+                <span>
+                    Попробуйте изменить поисковый запрос
+                </span>
+
+            </div>
+
+
+            <!-- Результаты -->
+            <div
+                id="header-search-results-wrap"
+                class="header-search-live__results-wrap"
+                hidden>
+
+                <div class="header-search-live__heading">
+                    Товары
+                </div>
+
+                <div
+                    id="header-search-results"
+                    class="header-search-live__results">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <a
+            id="header-search-all"
+            class="header-search-live__all"
+            href="/search/"
+            hidden>
+
+            <span>
+                Все результаты
+            </span>
+
+            <span
+                class="header-search-live__all-arrow"
+                aria-hidden="true">
+                →
+            </span>
+
+        </a>
+
+    </div>
+
+</div>
+<!-- ==========================================================================
+     MEGA MENU "КАТАЛОГ"
+     ========================================================================== -->
+
+<div
+    id="mega-menu"
+    class="mega-menu"
+    hidden>
+
+    <div
+        id="mega-menu-overlay"
+        class="mega-menu__overlay">
+    </div>
+
+    <div class="mega-menu__panel">
+
+        <div class="mega-menu__inner">
+
+            <!-- ======================================================
+                 SIDEBAR
+                 ====================================================== -->
+
+            <div class="mega-menu__sidebar">
+
+                <ul class="mega-menu__nav">
+
+                    
+                    <li class="mega-menu__nav-item">
+
+                        <a
+                            href="/catalog/buggi/"
+                            class="mega-menu__nav-link is-active"
+                            data-mega-target="mega-menu-panel-5">
+
+                            Багги
+                        </a>
+
+                    </li>
+
+                    
+                    <li class="mega-menu__nav-item">
+
+                        <a
+                            href="/catalog/snegohodi/"
+                            class="mega-menu__nav-link"
+                            data-mega-target="mega-menu-panel-13">
+
+                            Снегоходы
+                        </a>
+
+                    </li>
+
+                    
+                    <li class="mega-menu__nav-item">
+
+                        <a
+                            href="/catalog/kvadrocikly/"
+                            class="mega-menu__nav-link"
+                            data-mega-target="mega-menu-panel-20">
+
+                            Квадроциклы
+                        </a>
+
+                    </li>
+
+                    
+                    <li class="mega-menu__nav-item">
+
+                        <a
+                            href="/catalog/gidrocikly/"
+                            class="mega-menu__nav-link"
+                            data-mega-target="mega-menu-panel-19">
+
+                            Гидроциклы
+                        </a>
+
+                    </li>
+
+                    
+                    <li class="mega-menu__nav-item">
+
+                        <a
+                            href="/catalog/motorcycles/"
+                            class="mega-menu__nav-link"
+                            data-mega-target="mega-menu-panel-16">
+
+                            Мотоциклы
+                        </a>
+
+                    </li>
+
+                    
+                    <li class="mega-menu__nav-item">
+
+                        <a
+                            href="/catalog/tricikly/"
+                            class="mega-menu__nav-link"
+                            data-mega-target="mega-menu-panel-18">
+
+                            Трициклы
+                        </a>
+
+                    </li>
+
+                    
+                    <li class="mega-menu__nav-item">
+
+                        <a
+                            href="/catalog/aksessuary/"
+                            class="mega-menu__nav-link"
+                            data-mega-target="mega-menu-panel-181">
+
+                            Аксессуары и тюнинг
+                        </a>
+
+                    </li>
+
+                    
+                </ul>
+
+                <a
+                    href="/catalog/"
+                    class="mega-menu__all-link">
+
+                    Весь каталог товаров
+
+                </a>
+
+            </div>
+
+
+            <!-- ======================================================
+                 CONTENT
+                 ====================================================== -->
+
+            <div class="mega-menu__content">
+
+                
+                <div
+                    id="mega-menu-panel-5"
+                    class="mega-menu__panel-body is-active">
+
+                    
+
+                    
+                    <!-- Техника: бренды + разделы, и фото - 2 равные колонки -->
+
+                    <div class="mega-menu__vehicle">
+
+                        <div class="mega-menu__vehicle-main">
+
+                            
+                    <div class="mega-menu__brands">
+
+                        
+                        <a
+                            href="/catalog/buggi/brp-can-am/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/b5b/e65wqd1y52893f4jhmxx37rc85huyzq7/image 2.png"
+                                alt="BRP Can-Am">
+
+                            
+                        </a>
+
+                        
+                        <a
+                            href="/catalog/buggi/kawasaki/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/907/o5hcv9ybp5b2f0p2m20nrj2bqs77drcd/Kawasaki (2).png"
+                                alt="KAWASAKI">
+
+                            
+                        </a>
+
+                        
+                        <a
+                            href="/catalog/buggi/polaris/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/3b4/ctscsxs3l9qduenuz6ivc8v8pi1nuhy7/Polaris (2).png"
+                                alt="POLARIS">
+
+                            
+                        </a>
+
+                        
+                        <a
+                            href="/catalog/buggi/yamaha/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/665/85643cq6f0msmw89noesmuvuo2vh1juq/Yamaha (2).png"
+                                alt="YAMAHA">
+
+                            
+                        </a>
+
+                        
+                    </div>
+
+                    
+                            <ul class="mega-menu__sections">
+
+                                
+                                <li>
+                                    <a href="/catalog/buggi/sportivnye/">
+                                        Спортивные                                    </a>
+                                </li>
+
+                                
+                                <li>
+                                    <a href="/catalog/buggi/turisticheskie/">
+                                        Туристические                                    </a>
+                                </li>
+
+                                
+                                <li>
+                                    <a href="/catalog/buggi/utilitarnye/">
+                                        Утилитарные                                    </a>
+                                </li>
+
+                                
+                            </ul>
+
+                        </div>
+
+                        
+                        <a
+                            href="/catalog/buggi/"
+                            class="mega-menu__photo">
+
+                            <img
+                                src="/upload/menu-images/buggy.jpg"
+                                alt="Багги">
+
+                        </a>
+
+                        
+                    </div>
+
+                    
+                </div>
+
+                
+                <div
+                    id="mega-menu-panel-13"
+                    class="mega-menu__panel-body">
+
+                    
+
+                    
+                    <!-- Техника: бренды + разделы, и фото - 2 равные колонки -->
+
+                    <div class="mega-menu__vehicle">
+
+                        <div class="mega-menu__vehicle-main">
+
+                            
+                    <div class="mega-menu__brands">
+
+                        
+                        <a
+                            href="/catalog/snegohodi/brp-ski-doo/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/47a/y5r6kactu839esus35kpxchcfpc5r9jo/SKIDOO.png"
+                                alt="BRP SKI-DOO">
+
+                            
+                        </a>
+
+                        
+                        <a
+                            href="/catalog/snegohodi/polaris/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/3b4/ctscsxs3l9qduenuz6ivc8v8pi1nuhy7/Polaris (2).png"
+                                alt="POLARIS">
+
+                            
+                        </a>
+
+                        
+                    </div>
+
+                    
+                            <ul class="mega-menu__sections">
+
+                                
+                                <li>
+                                    <a href="/catalog/snegohodi/gornye/">
+                                        Горные                                    </a>
+                                </li>
+
+                                
+                                <li>
+                                    <a href="/catalog/snegohodi/crossovery/">
+                                        Кроссоверы                                    </a>
+                                </li>
+
+                                
+                                <li>
+                                    <a href="/catalog/snegohodi/sportivnye/">
+                                        Спортивные                                    </a>
+                                </li>
+
+                                
+                                <li>
+                                    <a href="/catalog/snegohodi/turisticheskie/">
+                                        Туристические                                    </a>
+                                </li>
+
+                                
+                                <li>
+                                    <a href="/catalog/snegohodi/utilitarnye/">
+                                        Утилитарные                                    </a>
+                                </li>
+
+                                
+                            </ul>
+
+                        </div>
+
+                        
+                        <a
+                            href="/catalog/snegohodi/"
+                            class="mega-menu__photo">
+
+                            <img
+                                src="/upload/menu-images/snow.jpg"
+                                alt="Снегоходы">
+
+                        </a>
+
+                        
+                    </div>
+
+                    
+                </div>
+
+                
+                <div
+                    id="mega-menu-panel-20"
+                    class="mega-menu__panel-body">
+
+                    
+
+                    
+                    <!-- Техника: бренды + разделы, и фото - 2 равные колонки -->
+
+                    <div class="mega-menu__vehicle">
+
+                        <div class="mega-menu__vehicle-main">
+
+                            
+                    <div class="mega-menu__brands">
+
+                        
+                        <a
+                            href="/catalog/kvadrocikly/brp-can-am/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/b5b/e65wqd1y52893f4jhmxx37rc85huyzq7/image 2.png"
+                                alt="BRP Can-Am">
+
+                            
+                        </a>
+
+                        
+                        <a
+                            href="/catalog/kvadrocikly/kawasaki/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/907/o5hcv9ybp5b2f0p2m20nrj2bqs77drcd/Kawasaki (2).png"
+                                alt="KAWASAKI">
+
+                            
+                        </a>
+
+                        
+                        <a
+                            href="/catalog/kvadrocikly/polaris/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/3b4/ctscsxs3l9qduenuz6ivc8v8pi1nuhy7/Polaris (2).png"
+                                alt="POLARIS">
+
+                            
+                        </a>
+
+                        
+                        <a
+                            href="/catalog/kvadrocikly/yamaha/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/665/85643cq6f0msmw89noesmuvuo2vh1juq/Yamaha (2).png"
+                                alt="YAMAHA">
+
+                            
+                        </a>
+
+                        
+                    </div>
+
+                    
+                            <ul class="mega-menu__sections">
+
+                                
+                                <li>
+                                    <a href="/catalog/kvadrocikly/sportivnye/">
+                                        Спортивные                                    </a>
+                                </li>
+
+                                
+                                <li>
+                                    <a href="/catalog/kvadrocikly/turisticheskie/">
+                                        Туристические                                    </a>
+                                </li>
+
+                                
+                                <li>
+                                    <a href="/catalog/kvadrocikly/utilitarnye/">
+                                        Утилитарные                                    </a>
+                                </li>
+
+                                
+                            </ul>
+
+                        </div>
+
+                        
+                        <a
+                            href="/catalog/kvadrocikly/"
+                            class="mega-menu__photo">
+
+                            <img
+                                src="/upload/menu-images/quadro.jpg"
+                                alt="Квадроциклы">
+
+                        </a>
+
+                        
+                    </div>
+
+                    
+                </div>
+
+                
+                <div
+                    id="mega-menu-panel-19"
+                    class="mega-menu__panel-body">
+
+                    
+
+                    
+                    <!-- Техника: бренды + разделы, и фото - 2 равные колонки -->
+
+                    <div class="mega-menu__vehicle">
+
+                        <div class="mega-menu__vehicle-main">
+
+                            
+                    <div class="mega-menu__brands">
+
+                        
+                        <a
+                            href="/catalog/gidrocikly/brp-sea-doo/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/748/bzqvqftlhnepl4oxxw21gou9yu9uy9pp/SEADOO.png"
+                                alt="BRP SEA-DOO">
+
+                            
+                        </a>
+
+                        
+                    </div>
+
+                    
+                            <ul class="mega-menu__sections">
+
+                                
+                                <li>
+                                    <a href="/catalog/gidrocikly/sportivnye/">
+                                        Спортивные                                    </a>
+                                </li>
+
+                                
+                                <li>
+                                    <a href="/catalog/gidrocikly/tyristicheskie/">
+                                        Туристические                                    </a>
+                                </li>
+
+                                
+                            </ul>
+
+                        </div>
+
+                        
+                        <a
+                            href="/catalog/gidrocikly/"
+                            class="mega-menu__photo">
+
+                            <img
+                                src="/upload/menu-images/aqua.jpg"
+                                alt="Гидроциклы">
+
+                        </a>
+
+                        
+                    </div>
+
+                    
+                </div>
+
+                
+                <div
+                    id="mega-menu-panel-16"
+                    class="mega-menu__panel-body">
+
+                    
+
+                    
+                    <!-- Техника: бренды + разделы, и фото - 2 равные колонки -->
+
+                    <div class="mega-menu__vehicle">
+
+                        <div class="mega-menu__vehicle-main">
+
+                            
+                    <div class="mega-menu__brands">
+
+                        
+                        <a
+                            href="/catalog/motorcycles/bmw-motorrad/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/247/yrmvj620vhoqsl70b216c0eswvfpy5ig/BMW.png"
+                                alt="BMW-MOTORRAD">
+
+                            
+                        </a>
+
+                        
+                        <a
+                            href="/catalog/motorcycles/ducati/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/77d/pih2sf5rdpgwz5g3bd3jhk1l4uwftl5q/DUCATI.png"
+                                alt="DUCATI">
+
+                            
+                        </a>
+
+                        
+                        <a
+                            href="/catalog/motorcycles/kawasaki/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/907/o5hcv9ybp5b2f0p2m20nrj2bqs77drcd/Kawasaki (2).png"
+                                alt="KAWASAKI">
+
+                            
+                        </a>
+
+                        
+                        <a
+                            href="/catalog/motorcycles/triumph/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/3a3/no3zk0rjab2pbvugavlxnjspdm57qfkn/image 1.png"
+                                alt="TRIUMPH">
+
+                            
+                        </a>
+
+                        
+                        <a
+                            href="/catalog/motorcycles/yamaha/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/665/85643cq6f0msmw89noesmuvuo2vh1juq/Yamaha (2).png"
+                                alt="YAMAHA">
+
+                            
+                        </a>
+
+                        
+                    </div>
+
+                    
+                            <ul class="mega-menu__sections">
+
+                                
+                                <li>
+                                    <a href="/catalog/motorcycles/sportivnye/">
+                                        Спортивные                                    </a>
+                                </li>
+
+                                
+                                <li>
+                                    <a href="/catalog/motorcycles/supersport/">
+                                        Суперспорт                                    </a>
+                                </li>
+
+                                
+                                <li>
+                                    <a href="/catalog/motorcycles/enduro/">
+                                        Эндуро                                    </a>
+                                </li>
+
+                                
+                                <li>
+                                    <a href="/catalog/motorcycles/tur-enduro/">
+                                        Тур-эндуро                                    </a>
+                                </li>
+
+                                
+                                <li>
+                                    <a href="/catalog/motorcycles/dorojnye/">
+                                        Дорожные                                    </a>
+                                </li>
+
+                                
+                                <li>
+                                    <a href="/catalog/motorcycles/cruizery/">
+                                        Круизеры                                    </a>
+                                </li>
+
+                                
+                                <li>
+                                    <a href="/catalog/motorcycles/motardy/">
+                                        Мотарды                                    </a>
+                                </li>
+
+                                
+                                <li>
+                                    <a href="/catalog/motorcycles/neykedy/">
+                                        Нейкеды                                    </a>
+                                </li>
+
+                                
+                            </ul>
+
+                        </div>
+
+                        
+                        <a
+                            href="/catalog/motorcycles/"
+                            class="mega-menu__photo">
+
+                            <img
+                                src="/upload/menu-images/moto.jpg"
+                                alt="Мотоциклы">
+
+                        </a>
+
+                        
+                    </div>
+
+                    
+                </div>
+
+                
+                <div
+                    id="mega-menu-panel-18"
+                    class="mega-menu__panel-body">
+
+                    
+
+                    
+                    <!-- Техника: бренды + разделы, и фото - 2 равные колонки -->
+
+                    <div class="mega-menu__vehicle">
+
+                        <div class="mega-menu__vehicle-main">
+
+                            
+                    <div class="mega-menu__brands">
+
+                        
+                        <a
+                            href="/catalog/tricikly/brp-can-am/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/b5b/e65wqd1y52893f4jhmxx37rc85huyzq7/image 2.png"
+                                alt="BRP Can-Am">
+
+                            
+                        </a>
+
+                        
+                    </div>
+
+                    
+                            <ul class="mega-menu__sections">
+
+                                
+                            </ul>
+
+                        </div>
+
+                        
+                        <a
+                            href="/catalog/tricikly/"
+                            class="mega-menu__photo">
+
+                            <img
+                                src="/upload/menu-images/tri.jpg"
+                                alt="Трициклы">
+
+                        </a>
+
+                        
+                    </div>
+
+                    
+                </div>
+
+                
+                <div
+                    id="mega-menu-panel-181"
+                    class="mega-menu__panel-body">
+
+                    
+                    <div class="mega-menu__brands-standalone">
+                        
+                    <div class="mega-menu__brands">
+
+                        
+                        <a
+                            href="/catalog/aksessuary/brp-can-am/"
+                            class="mega-menu__brand-chip">
+
+                            
+                            <img
+                                src="/upload/iblock/b5b/e65wqd1y52893f4jhmxx37rc85huyzq7/image 2.png"
+                                alt="BRP Can-Am">
+
+                            
+                        </a>
+
+                        
+                    </div>
+
+                                        </div>
+
+                    
+
+                    
+                    <!-- Не техника: разделы с подразделами -->
+
+                    <div class="mega-menu__groups">
+
+                        
+                        <div class="mega-menu__group">
+
+                            <a
+                                href="/catalog/aksessuary/zashchita-kuzova-i-dnishcha/"
+                                class="mega-menu__group-title">
+
+                                Защита кузова и днища
+                            </a>
+
+                            
+                            <ul class="mega-menu__group-list">
+
+                                
+                                <li
+                                    >
+
+                                    <a href="/catalog/aksessuary/zashchita-kuzova-i-dnishcha/zashchita-kartera-i-dnishcha/">
+                                        Защита картера и днища                                    </a>
+
+                                </li>
+
+                                
+                                <li
+                                    >
+
+                                    <a href="/catalog/aksessuary/zashchita-kuzova-i-dnishcha/zashchitnye-dugi/">
+                                        Защитные дуги                                    </a>
+
+                                </li>
+
+                                
+                            </ul>
+
+                            
+                            
+                        </div>
+
+                        
+                    </div>
+
+                    
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==========================================================================
+     МОБИЛЬНОЕ МЕНЮ (≤991px)
+     ========================================================================== -->
+
+<div
+    id="mobile-menu"
+    class="mobile-menu"
+    hidden>
+
+    <div
+        id="mobile-menu-overlay"
+        class="mobile-menu__overlay">
+    </div>
+
+    <div class="mobile-menu__panel">
+
+        <!-- ROOT: "Меню" -->
+        <div
+            class="mobile-menu__screen"
+            data-screen="root">
+
+            <div class="mobile-menu__header mobile-menu__header--root">
+                <h2 class="mobile-menu__title">Меню</h2>
+                <button
+                    type="button"
+                    class="mobile-menu__icon-btn"
+                    data-mobile-menu-close
+                    aria-label="Закрыть">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-close-mask-1" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path d="M15.7123 16.773L7.22699 8.28777C6.93708 7.99785 6.93708 7.51702 7.22699 7.22711C7.51691 6.93719 7.99774 6.93719 8.28765 7.22711L16.7729 15.7124C17.0628 16.0023 17.0628 16.4831 16.7729 16.773C16.483 17.063 16.0022 17.063 15.7123 16.773Z" fill="black"/>
+<path d="M7.22706 16.773C6.93715 16.4831 6.93715 16.0023 7.22706 15.7124L15.7123 7.22711C16.0023 6.93719 16.4831 6.93719 16.773 7.22711C17.0629 7.51702 17.0629 7.99785 16.773 8.28777L8.28772 16.773C7.99781 17.063 7.51698 17.063 7.22706 16.773Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-close-mask-1)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+            </div>
+
+            <div class="mobile-menu__body">
+                <ul class="mobile-menu__list">
+
+                    <li>
+                        <button type="button" class="mobile-menu__row" data-open-screen="catalog">
+                            <span>Каталог</span>
+                            <svg class="mobile-menu__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M7.5 5L12.5 10L7.5 15" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                                </button>
+                    </li>
+
+                    
+                    <li>
+                        <a href="/about/" class="mobile-menu__row">
+                            <span>О компании</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/delivery/" class="mobile-menu__row">
+                            <span>Доставка и оплата</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/blog/" class="mobile-menu__row">
+                            <span>Блог</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/contacts/" class="mobile-menu__row">
+                            <span>Контакты</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/blog/turbolemons-racing-team/" class="mobile-menu__row">
+                            <span>TurboLemons Racing Team</span>
+                            <span class="mobile-menu__racing-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-racing-mask-1" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.73167 5.77133L5.66953 9.91436C4.3848 11.6526 3.74244 12.5217 4.09639 13.205C4.10225 13.2164 4.10829 13.2276 4.1145 13.2387C4.48945 13.9117 5.59888 13.9117 7.81775 13.9117C9.05079 13.9117 9.6673 13.9117 10.054 14.2754L10.074 14.2946L13.946 9.72466L13.926 9.70541C13.5474 9.33386 13.5474 8.74151 13.5474 7.55682V7.24712C13.5474 3.96249 13.5474 2.32018 12.6241 2.03721C11.7007 1.75425 10.711 3.09327 8.73167 5.77133Z" fill="black"/>
+<path opacity="0.5" d="M10.4527 16.4432L10.4527 16.7528C10.4527 20.0374 10.4527 21.6798 11.376 21.9627C12.2994 22.2457 13.2891 20.9067 15.2685 18.2286L18.3306 14.0856C19.6154 12.3474 20.2577 11.4783 19.9038 10.7949C19.8979 10.7836 19.8919 10.7724 19.8857 10.7613C19.5107 10.0883 18.4013 10.0883 16.1824 10.0883C14.9494 10.0883 14.3329 10.0883 13.9462 9.72461L10.0742 14.2946C10.4528 14.6661 10.4527 15.2585 10.4527 16.4432Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-racing-mask-1)">
+<rect width="24" height="24" fill="#171717"/>
+</g>
+</svg>
+                                    </span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="mobile-menu__footer mobile-menu__footer--root">
+
+                <a href="tel:+78003011733" class="mobile-menu__phone">
+                    +7 (800) 301-17-33
+                </a>
+
+                <div class="mobile-menu__messengers">
+
+                    <a href="#" class="mobile-menu__messenger" aria-label="MAX">
+                        <img src="/local/templates/turbolemons-template/img/max.svg" alt="">
+                    </a>
+
+                    <a href="https://t.me/turbolemons_bot" class="mobile-menu__messenger" aria-label="Telegram">
+                        <img src="/local/templates/turbolemons-template/img/telegram.svg" alt="">
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- КАТАЛОГ: верхний уровень категорий -->
+        <div
+            class="mobile-menu__screen"
+            data-screen="catalog">
+
+            <div class="mobile-menu__header">
+                <button type="button" class="mobile-menu__icon-btn" data-back aria-label="Назад">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-back-mask-1" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.4881 4.43057C15.8026 4.70014 15.839 5.17361 15.5694 5.48811L9.98781 12L15.5694 18.5119C15.839 18.8264 15.8026 19.2999 15.4881 19.5695C15.1736 19.839 14.7001 19.8026 14.4306 19.4881L8.43056 12.4881C8.18981 12.2072 8.18981 11.7928 8.43056 11.5119L14.4306 4.51192C14.7001 4.19743 15.1736 4.161 15.4881 4.43057Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-back-mask-1)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+                <h2 class="mobile-menu__title">Каталог</h2>
+                <button type="button" class="mobile-menu__icon-btn" data-mobile-menu-close aria-label="Закрыть">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-close-mask-2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path d="M15.7123 16.773L7.22699 8.28777C6.93708 7.99785 6.93708 7.51702 7.22699 7.22711C7.51691 6.93719 7.99774 6.93719 8.28765 7.22711L16.7729 15.7124C17.0628 16.0023 17.0628 16.4831 16.7729 16.773C16.483 17.063 16.0022 17.063 15.7123 16.773Z" fill="black"/>
+<path d="M7.22706 16.773C6.93715 16.4831 6.93715 16.0023 7.22706 15.7124L15.7123 7.22711C16.0023 6.93719 16.4831 6.93719 16.773 7.22711C17.0629 7.51702 17.0629 7.99785 16.773 8.28777L8.28772 16.773C7.99781 17.063 7.51698 17.063 7.22706 16.773Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-close-mask-2)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+            </div>
+
+            <div class="mobile-menu__body">
+                <ul class="mobile-menu__list">
+
+                    
+                    <li>
+                        <button
+                            type="button"
+                            class="mobile-menu__row"
+                            data-open-screen="mega-mobile-cat-5">
+
+                            <span>Багги</span>
+                            <svg class="mobile-menu__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M7.5 5L12.5 10L7.5 15" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        
+                        </button>
+                    </li>
+
+                    
+                    <li>
+                        <button
+                            type="button"
+                            class="mobile-menu__row"
+                            data-open-screen="mega-mobile-cat-13">
+
+                            <span>Снегоходы</span>
+                            <svg class="mobile-menu__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M7.5 5L12.5 10L7.5 15" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        
+                        </button>
+                    </li>
+
+                    
+                    <li>
+                        <button
+                            type="button"
+                            class="mobile-menu__row"
+                            data-open-screen="mega-mobile-cat-20">
+
+                            <span>Квадроциклы</span>
+                            <svg class="mobile-menu__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M7.5 5L12.5 10L7.5 15" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        
+                        </button>
+                    </li>
+
+                    
+                    <li>
+                        <button
+                            type="button"
+                            class="mobile-menu__row"
+                            data-open-screen="mega-mobile-cat-19">
+
+                            <span>Гидроциклы</span>
+                            <svg class="mobile-menu__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M7.5 5L12.5 10L7.5 15" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        
+                        </button>
+                    </li>
+
+                    
+                    <li>
+                        <button
+                            type="button"
+                            class="mobile-menu__row"
+                            data-open-screen="mega-mobile-cat-16">
+
+                            <span>Мотоциклы</span>
+                            <svg class="mobile-menu__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M7.5 5L12.5 10L7.5 15" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        
+                        </button>
+                    </li>
+
+                    
+                    <li>
+                        <button
+                            type="button"
+                            class="mobile-menu__row"
+                            data-open-screen="mega-mobile-cat-18">
+
+                            <span>Трициклы</span>
+                            <svg class="mobile-menu__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M7.5 5L12.5 10L7.5 15" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        
+                        </button>
+                    </li>
+
+                    
+                    <li>
+                        <button
+                            type="button"
+                            class="mobile-menu__row"
+                            data-open-screen="mega-mobile-cat-181">
+
+                            <span>Аксессуары и тюнинг</span>
+                            <svg class="mobile-menu__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M7.5 5L12.5 10L7.5 15" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        
+                        </button>
+                    </li>
+
+                    
+                </ul>
+            </div>
+
+            <div class="mobile-menu__footer">
+                <a href="/catalog/" class="mobile-menu__btn mobile-menu__btn--grey">
+                    Весь каталог товаров
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- КАТЕГОРИИ (и их разделы-с-подразделами для не-техники) -->
+        
+        <div
+            class="mobile-menu__screen"
+            data-screen="mega-mobile-cat-5">
+
+            <div class="mobile-menu__header">
+                <button type="button" class="mobile-menu__icon-btn" data-back aria-label="Назад">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-back-mask-2" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.4881 4.43057C15.8026 4.70014 15.839 5.17361 15.5694 5.48811L9.98781 12L15.5694 18.5119C15.839 18.8264 15.8026 19.2999 15.4881 19.5695C15.1736 19.839 14.7001 19.8026 14.4306 19.4881L8.43056 12.4881C8.18981 12.2072 8.18981 11.7928 8.43056 11.5119L14.4306 4.51192C14.7001 4.19743 15.1736 4.161 15.4881 4.43057Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-back-mask-2)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+                <div class="mobile-menu__header-titles">
+                    <span class="mobile-menu__eyebrow">Каталог</span>
+                    <h2 class="mobile-menu__title">Багги</h2>
+                </div>
+                <button type="button" class="mobile-menu__icon-btn" data-mobile-menu-close aria-label="Закрыть">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-close-mask-3" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path d="M15.7123 16.773L7.22699 8.28777C6.93708 7.99785 6.93708 7.51702 7.22699 7.22711C7.51691 6.93719 7.99774 6.93719 8.28765 7.22711L16.7729 15.7124C17.0628 16.0023 17.0628 16.4831 16.7729 16.773C16.483 17.063 16.0022 17.063 15.7123 16.773Z" fill="black"/>
+<path d="M7.22706 16.773C6.93715 16.4831 6.93715 16.0023 7.22706 15.7124L15.7123 7.22711C16.0023 6.93719 16.4831 6.93719 16.773 7.22711C17.0629 7.51702 17.0629 7.99785 16.773 8.28777L8.28772 16.773C7.99781 17.063 7.51698 17.063 7.22706 16.773Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-close-mask-3)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+            </div>
+
+            <div class="mobile-menu__body">
+
+                
+                <ul class="mobile-menu__list">
+                                        <li>
+                        <a href="/catalog/buggi/sportivnye/" class="mobile-menu__row">
+                            <span>Спортивные</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/catalog/buggi/turisticheskie/" class="mobile-menu__row">
+                            <span>Туристические</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/catalog/buggi/utilitarnye/" class="mobile-menu__row">
+                            <span>Утилитарные</span>
+                        </a>
+                    </li>
+                                    </ul>
+
+                                <div class="mobile-menu__brands">
+                                        <a href="/catalog/buggi/brp-can-am/" class="mobile-menu__brand-chip">
+                                                <img src="/upload/iblock/b5b/e65wqd1y52893f4jhmxx37rc85huyzq7/image 2.png" alt="BRP Can-Am">
+                                            </a>
+                                        <a href="/catalog/buggi/kawasaki/" class="mobile-menu__brand-chip">
+                                                <img src="/upload/iblock/907/o5hcv9ybp5b2f0p2m20nrj2bqs77drcd/Kawasaki (2).png" alt="KAWASAKI">
+                                            </a>
+                                        <a href="/catalog/buggi/polaris/" class="mobile-menu__brand-chip">
+                                                <img src="/upload/iblock/3b4/ctscsxs3l9qduenuz6ivc8v8pi1nuhy7/Polaris (2).png" alt="POLARIS">
+                                            </a>
+                                        <a href="/catalog/buggi/yamaha/" class="mobile-menu__brand-chip">
+                                                <img src="/upload/iblock/665/85643cq6f0msmw89noesmuvuo2vh1juq/Yamaha (2).png" alt="YAMAHA">
+                                            </a>
+                                    </div>
+                
+                
+            </div>
+
+            <div class="mobile-menu__footer">
+                <a href="/catalog/buggi/" class="mobile-menu__btn mobile-menu__btn--grey">
+                    Смотреть все
+                </a>
+            </div>
+
+        </div>
+
+        
+        
+        <div
+            class="mobile-menu__screen"
+            data-screen="mega-mobile-cat-13">
+
+            <div class="mobile-menu__header">
+                <button type="button" class="mobile-menu__icon-btn" data-back aria-label="Назад">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-back-mask-3" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.4881 4.43057C15.8026 4.70014 15.839 5.17361 15.5694 5.48811L9.98781 12L15.5694 18.5119C15.839 18.8264 15.8026 19.2999 15.4881 19.5695C15.1736 19.839 14.7001 19.8026 14.4306 19.4881L8.43056 12.4881C8.18981 12.2072 8.18981 11.7928 8.43056 11.5119L14.4306 4.51192C14.7001 4.19743 15.1736 4.161 15.4881 4.43057Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-back-mask-3)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+                <div class="mobile-menu__header-titles">
+                    <span class="mobile-menu__eyebrow">Каталог</span>
+                    <h2 class="mobile-menu__title">Снегоходы</h2>
+                </div>
+                <button type="button" class="mobile-menu__icon-btn" data-mobile-menu-close aria-label="Закрыть">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-close-mask-4" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path d="M15.7123 16.773L7.22699 8.28777C6.93708 7.99785 6.93708 7.51702 7.22699 7.22711C7.51691 6.93719 7.99774 6.93719 8.28765 7.22711L16.7729 15.7124C17.0628 16.0023 17.0628 16.4831 16.7729 16.773C16.483 17.063 16.0022 17.063 15.7123 16.773Z" fill="black"/>
+<path d="M7.22706 16.773C6.93715 16.4831 6.93715 16.0023 7.22706 15.7124L15.7123 7.22711C16.0023 6.93719 16.4831 6.93719 16.773 7.22711C17.0629 7.51702 17.0629 7.99785 16.773 8.28777L8.28772 16.773C7.99781 17.063 7.51698 17.063 7.22706 16.773Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-close-mask-4)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+            </div>
+
+            <div class="mobile-menu__body">
+
+                
+                <ul class="mobile-menu__list">
+                                        <li>
+                        <a href="/catalog/snegohodi/gornye/" class="mobile-menu__row">
+                            <span>Горные</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/catalog/snegohodi/crossovery/" class="mobile-menu__row">
+                            <span>Кроссоверы</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/catalog/snegohodi/sportivnye/" class="mobile-menu__row">
+                            <span>Спортивные</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/catalog/snegohodi/turisticheskie/" class="mobile-menu__row">
+                            <span>Туристические</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/catalog/snegohodi/utilitarnye/" class="mobile-menu__row">
+                            <span>Утилитарные</span>
+                        </a>
+                    </li>
+                                    </ul>
+
+                                <div class="mobile-menu__brands">
+                                        <a href="/catalog/snegohodi/brp-ski-doo/" class="mobile-menu__brand-chip">
+                                                <img src="/upload/iblock/47a/y5r6kactu839esus35kpxchcfpc5r9jo/SKIDOO.png" alt="BRP SKI-DOO">
+                                            </a>
+                                        <a href="/catalog/snegohodi/polaris/" class="mobile-menu__brand-chip">
+                                                <img src="/upload/iblock/3b4/ctscsxs3l9qduenuz6ivc8v8pi1nuhy7/Polaris (2).png" alt="POLARIS">
+                                            </a>
+                                    </div>
+                
+                
+            </div>
+
+            <div class="mobile-menu__footer">
+                <a href="/catalog/snegohodi/" class="mobile-menu__btn mobile-menu__btn--grey">
+                    Смотреть все
+                </a>
+            </div>
+
+        </div>
+
+        
+        
+        <div
+            class="mobile-menu__screen"
+            data-screen="mega-mobile-cat-20">
+
+            <div class="mobile-menu__header">
+                <button type="button" class="mobile-menu__icon-btn" data-back aria-label="Назад">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-back-mask-4" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.4881 4.43057C15.8026 4.70014 15.839 5.17361 15.5694 5.48811L9.98781 12L15.5694 18.5119C15.839 18.8264 15.8026 19.2999 15.4881 19.5695C15.1736 19.839 14.7001 19.8026 14.4306 19.4881L8.43056 12.4881C8.18981 12.2072 8.18981 11.7928 8.43056 11.5119L14.4306 4.51192C14.7001 4.19743 15.1736 4.161 15.4881 4.43057Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-back-mask-4)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+                <div class="mobile-menu__header-titles">
+                    <span class="mobile-menu__eyebrow">Каталог</span>
+                    <h2 class="mobile-menu__title">Квадроциклы</h2>
+                </div>
+                <button type="button" class="mobile-menu__icon-btn" data-mobile-menu-close aria-label="Закрыть">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-close-mask-5" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path d="M15.7123 16.773L7.22699 8.28777C6.93708 7.99785 6.93708 7.51702 7.22699 7.22711C7.51691 6.93719 7.99774 6.93719 8.28765 7.22711L16.7729 15.7124C17.0628 16.0023 17.0628 16.4831 16.7729 16.773C16.483 17.063 16.0022 17.063 15.7123 16.773Z" fill="black"/>
+<path d="M7.22706 16.773C6.93715 16.4831 6.93715 16.0023 7.22706 15.7124L15.7123 7.22711C16.0023 6.93719 16.4831 6.93719 16.773 7.22711C17.0629 7.51702 17.0629 7.99785 16.773 8.28777L8.28772 16.773C7.99781 17.063 7.51698 17.063 7.22706 16.773Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-close-mask-5)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+            </div>
+
+            <div class="mobile-menu__body">
+
+                
+                <ul class="mobile-menu__list">
+                                        <li>
+                        <a href="/catalog/kvadrocikly/sportivnye/" class="mobile-menu__row">
+                            <span>Спортивные</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/catalog/kvadrocikly/turisticheskie/" class="mobile-menu__row">
+                            <span>Туристические</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/catalog/kvadrocikly/utilitarnye/" class="mobile-menu__row">
+                            <span>Утилитарные</span>
+                        </a>
+                    </li>
+                                    </ul>
+
+                                <div class="mobile-menu__brands">
+                                        <a href="/catalog/kvadrocikly/brp-can-am/" class="mobile-menu__brand-chip">
+                                                <img src="/upload/iblock/b5b/e65wqd1y52893f4jhmxx37rc85huyzq7/image 2.png" alt="BRP Can-Am">
+                                            </a>
+                                        <a href="/catalog/kvadrocikly/kawasaki/" class="mobile-menu__brand-chip">
+                                                <img src="/upload/iblock/907/o5hcv9ybp5b2f0p2m20nrj2bqs77drcd/Kawasaki (2).png" alt="KAWASAKI">
+                                            </a>
+                                        <a href="/catalog/kvadrocikly/polaris/" class="mobile-menu__brand-chip">
+                                                <img src="/upload/iblock/3b4/ctscsxs3l9qduenuz6ivc8v8pi1nuhy7/Polaris (2).png" alt="POLARIS">
+                                            </a>
+                                        <a href="/catalog/kvadrocikly/yamaha/" class="mobile-menu__brand-chip">
+                                                <img src="/upload/iblock/665/85643cq6f0msmw89noesmuvuo2vh1juq/Yamaha (2).png" alt="YAMAHA">
+                                            </a>
+                                    </div>
+                
+                
+            </div>
+
+            <div class="mobile-menu__footer">
+                <a href="/catalog/kvadrocikly/" class="mobile-menu__btn mobile-menu__btn--grey">
+                    Смотреть все
+                </a>
+            </div>
+
+        </div>
+
+        
+        
+        <div
+            class="mobile-menu__screen"
+            data-screen="mega-mobile-cat-19">
+
+            <div class="mobile-menu__header">
+                <button type="button" class="mobile-menu__icon-btn" data-back aria-label="Назад">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-back-mask-5" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.4881 4.43057C15.8026 4.70014 15.839 5.17361 15.5694 5.48811L9.98781 12L15.5694 18.5119C15.839 18.8264 15.8026 19.2999 15.4881 19.5695C15.1736 19.839 14.7001 19.8026 14.4306 19.4881L8.43056 12.4881C8.18981 12.2072 8.18981 11.7928 8.43056 11.5119L14.4306 4.51192C14.7001 4.19743 15.1736 4.161 15.4881 4.43057Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-back-mask-5)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+                <div class="mobile-menu__header-titles">
+                    <span class="mobile-menu__eyebrow">Каталог</span>
+                    <h2 class="mobile-menu__title">Гидроциклы</h2>
+                </div>
+                <button type="button" class="mobile-menu__icon-btn" data-mobile-menu-close aria-label="Закрыть">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-close-mask-6" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path d="M15.7123 16.773L7.22699 8.28777C6.93708 7.99785 6.93708 7.51702 7.22699 7.22711C7.51691 6.93719 7.99774 6.93719 8.28765 7.22711L16.7729 15.7124C17.0628 16.0023 17.0628 16.4831 16.7729 16.773C16.483 17.063 16.0022 17.063 15.7123 16.773Z" fill="black"/>
+<path d="M7.22706 16.773C6.93715 16.4831 6.93715 16.0023 7.22706 15.7124L15.7123 7.22711C16.0023 6.93719 16.4831 6.93719 16.773 7.22711C17.0629 7.51702 17.0629 7.99785 16.773 8.28777L8.28772 16.773C7.99781 17.063 7.51698 17.063 7.22706 16.773Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-close-mask-6)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+            </div>
+
+            <div class="mobile-menu__body">
+
+                
+                <ul class="mobile-menu__list">
+                                        <li>
+                        <a href="/catalog/gidrocikly/sportivnye/" class="mobile-menu__row">
+                            <span>Спортивные</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/catalog/gidrocikly/tyristicheskie/" class="mobile-menu__row">
+                            <span>Туристические</span>
+                        </a>
+                    </li>
+                                    </ul>
+
+                                <div class="mobile-menu__brands">
+                                        <a href="/catalog/gidrocikly/brp-sea-doo/" class="mobile-menu__brand-chip">
+                                                <img src="/upload/iblock/748/bzqvqftlhnepl4oxxw21gou9yu9uy9pp/SEADOO.png" alt="BRP SEA-DOO">
+                                            </a>
+                                    </div>
+                
+                
+            </div>
+
+            <div class="mobile-menu__footer">
+                <a href="/catalog/gidrocikly/" class="mobile-menu__btn mobile-menu__btn--grey">
+                    Смотреть все
+                </a>
+            </div>
+
+        </div>
+
+        
+        
+        <div
+            class="mobile-menu__screen"
+            data-screen="mega-mobile-cat-16">
+
+            <div class="mobile-menu__header">
+                <button type="button" class="mobile-menu__icon-btn" data-back aria-label="Назад">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-back-mask-6" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.4881 4.43057C15.8026 4.70014 15.839 5.17361 15.5694 5.48811L9.98781 12L15.5694 18.5119C15.839 18.8264 15.8026 19.2999 15.4881 19.5695C15.1736 19.839 14.7001 19.8026 14.4306 19.4881L8.43056 12.4881C8.18981 12.2072 8.18981 11.7928 8.43056 11.5119L14.4306 4.51192C14.7001 4.19743 15.1736 4.161 15.4881 4.43057Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-back-mask-6)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+                <div class="mobile-menu__header-titles">
+                    <span class="mobile-menu__eyebrow">Каталог</span>
+                    <h2 class="mobile-menu__title">Мотоциклы</h2>
+                </div>
+                <button type="button" class="mobile-menu__icon-btn" data-mobile-menu-close aria-label="Закрыть">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-close-mask-7" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path d="M15.7123 16.773L7.22699 8.28777C6.93708 7.99785 6.93708 7.51702 7.22699 7.22711C7.51691 6.93719 7.99774 6.93719 8.28765 7.22711L16.7729 15.7124C17.0628 16.0023 17.0628 16.4831 16.7729 16.773C16.483 17.063 16.0022 17.063 15.7123 16.773Z" fill="black"/>
+<path d="M7.22706 16.773C6.93715 16.4831 6.93715 16.0023 7.22706 15.7124L15.7123 7.22711C16.0023 6.93719 16.4831 6.93719 16.773 7.22711C17.0629 7.51702 17.0629 7.99785 16.773 8.28777L8.28772 16.773C7.99781 17.063 7.51698 17.063 7.22706 16.773Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-close-mask-7)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+            </div>
+
+            <div class="mobile-menu__body">
+
+                
+                <ul class="mobile-menu__list">
+                                        <li>
+                        <a href="/catalog/motorcycles/sportivnye/" class="mobile-menu__row">
+                            <span>Спортивные</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/catalog/motorcycles/supersport/" class="mobile-menu__row">
+                            <span>Суперспорт</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/catalog/motorcycles/enduro/" class="mobile-menu__row">
+                            <span>Эндуро</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/catalog/motorcycles/tur-enduro/" class="mobile-menu__row">
+                            <span>Тур-эндуро</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/catalog/motorcycles/dorojnye/" class="mobile-menu__row">
+                            <span>Дорожные</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/catalog/motorcycles/cruizery/" class="mobile-menu__row">
+                            <span>Круизеры</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/catalog/motorcycles/motardy/" class="mobile-menu__row">
+                            <span>Мотарды</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="/catalog/motorcycles/neykedy/" class="mobile-menu__row">
+                            <span>Нейкеды</span>
+                        </a>
+                    </li>
+                                    </ul>
+
+                                <div class="mobile-menu__brands">
+                                        <a href="/catalog/motorcycles/bmw-motorrad/" class="mobile-menu__brand-chip">
+                                                <img src="/upload/iblock/247/yrmvj620vhoqsl70b216c0eswvfpy5ig/BMW.png" alt="BMW-MOTORRAD">
+                                            </a>
+                                        <a href="/catalog/motorcycles/ducati/" class="mobile-menu__brand-chip">
+                                                <img src="/upload/iblock/77d/pih2sf5rdpgwz5g3bd3jhk1l4uwftl5q/DUCATI.png" alt="DUCATI">
+                                            </a>
+                                        <a href="/catalog/motorcycles/kawasaki/" class="mobile-menu__brand-chip">
+                                                <img src="/upload/iblock/907/o5hcv9ybp5b2f0p2m20nrj2bqs77drcd/Kawasaki (2).png" alt="KAWASAKI">
+                                            </a>
+                                        <a href="/catalog/motorcycles/triumph/" class="mobile-menu__brand-chip">
+                                                <img src="/upload/iblock/3a3/no3zk0rjab2pbvugavlxnjspdm57qfkn/image 1.png" alt="TRIUMPH">
+                                            </a>
+                                        <a href="/catalog/motorcycles/yamaha/" class="mobile-menu__brand-chip">
+                                                <img src="/upload/iblock/665/85643cq6f0msmw89noesmuvuo2vh1juq/Yamaha (2).png" alt="YAMAHA">
+                                            </a>
+                                    </div>
+                
+                
+            </div>
+
+            <div class="mobile-menu__footer">
+                <a href="/catalog/motorcycles/" class="mobile-menu__btn mobile-menu__btn--grey">
+                    Смотреть все
+                </a>
+            </div>
+
+        </div>
+
+        
+        
+        <div
+            class="mobile-menu__screen"
+            data-screen="mega-mobile-cat-18">
+
+            <div class="mobile-menu__header">
+                <button type="button" class="mobile-menu__icon-btn" data-back aria-label="Назад">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-back-mask-7" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.4881 4.43057C15.8026 4.70014 15.839 5.17361 15.5694 5.48811L9.98781 12L15.5694 18.5119C15.839 18.8264 15.8026 19.2999 15.4881 19.5695C15.1736 19.839 14.7001 19.8026 14.4306 19.4881L8.43056 12.4881C8.18981 12.2072 8.18981 11.7928 8.43056 11.5119L14.4306 4.51192C14.7001 4.19743 15.1736 4.161 15.4881 4.43057Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-back-mask-7)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+                <div class="mobile-menu__header-titles">
+                    <span class="mobile-menu__eyebrow">Каталог</span>
+                    <h2 class="mobile-menu__title">Трициклы</h2>
+                </div>
+                <button type="button" class="mobile-menu__icon-btn" data-mobile-menu-close aria-label="Закрыть">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-close-mask-8" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path d="M15.7123 16.773L7.22699 8.28777C6.93708 7.99785 6.93708 7.51702 7.22699 7.22711C7.51691 6.93719 7.99774 6.93719 8.28765 7.22711L16.7729 15.7124C17.0628 16.0023 17.0628 16.4831 16.7729 16.773C16.483 17.063 16.0022 17.063 15.7123 16.773Z" fill="black"/>
+<path d="M7.22706 16.773C6.93715 16.4831 6.93715 16.0023 7.22706 15.7124L15.7123 7.22711C16.0023 6.93719 16.4831 6.93719 16.773 7.22711C17.0629 7.51702 17.0629 7.99785 16.773 8.28777L8.28772 16.773C7.99781 17.063 7.51698 17.063 7.22706 16.773Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-close-mask-8)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+            </div>
+
+            <div class="mobile-menu__body">
+
+                
+                <ul class="mobile-menu__list">
+                                    </ul>
+
+                                <div class="mobile-menu__brands">
+                                        <a href="/catalog/tricikly/brp-can-am/" class="mobile-menu__brand-chip">
+                                                <img src="/upload/iblock/b5b/e65wqd1y52893f4jhmxx37rc85huyzq7/image 2.png" alt="BRP Can-Am">
+                                            </a>
+                                    </div>
+                
+                
+            </div>
+
+            <div class="mobile-menu__footer">
+                <a href="/catalog/tricikly/" class="mobile-menu__btn mobile-menu__btn--grey">
+                    Смотреть все
+                </a>
+            </div>
+
+        </div>
+
+        
+        
+        <div
+            class="mobile-menu__screen"
+            data-screen="mega-mobile-cat-181">
+
+            <div class="mobile-menu__header">
+                <button type="button" class="mobile-menu__icon-btn" data-back aria-label="Назад">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-back-mask-8" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.4881 4.43057C15.8026 4.70014 15.839 5.17361 15.5694 5.48811L9.98781 12L15.5694 18.5119C15.839 18.8264 15.8026 19.2999 15.4881 19.5695C15.1736 19.839 14.7001 19.8026 14.4306 19.4881L8.43056 12.4881C8.18981 12.2072 8.18981 11.7928 8.43056 11.5119L14.4306 4.51192C14.7001 4.19743 15.1736 4.161 15.4881 4.43057Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-back-mask-8)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+                <div class="mobile-menu__header-titles">
+                    <span class="mobile-menu__eyebrow">Каталог</span>
+                    <h2 class="mobile-menu__title">Аксессуары и тюнинг</h2>
+                </div>
+                <button type="button" class="mobile-menu__icon-btn" data-mobile-menu-close aria-label="Закрыть">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-close-mask-9" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path d="M15.7123 16.773L7.22699 8.28777C6.93708 7.99785 6.93708 7.51702 7.22699 7.22711C7.51691 6.93719 7.99774 6.93719 8.28765 7.22711L16.7729 15.7124C17.0628 16.0023 17.0628 16.4831 16.7729 16.773C16.483 17.063 16.0022 17.063 15.7123 16.773Z" fill="black"/>
+<path d="M7.22706 16.773C6.93715 16.4831 6.93715 16.0023 7.22706 15.7124L15.7123 7.22711C16.0023 6.93719 16.4831 6.93719 16.773 7.22711C17.0629 7.51702 17.0629 7.99785 16.773 8.28777L8.28772 16.773C7.99781 17.063 7.51698 17.063 7.22706 16.773Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-close-mask-9)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+            </div>
+
+            <div class="mobile-menu__body">
+
+                
+                <ul class="mobile-menu__list">
+                                        <li>
+                                                <button
+                            type="button"
+                            class="mobile-menu__row"
+                            data-open-screen="mega-mobile-group-307">
+                            <span>Защита кузова и днища</span>
+                            <svg class="mobile-menu__chevron" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M7.5 5L12.5 10L7.5 15" stroke="#A3A3A3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                                </button>
+                                            </li>
+                                    </ul>
+
+                
+            </div>
+
+            <div class="mobile-menu__footer">
+                <a href="/catalog/aksessuary/" class="mobile-menu__btn mobile-menu__btn--grey">
+                    Смотреть все
+                </a>
+            </div>
+
+        </div>
+
+        
+            
+                
+                <div
+                    class="mobile-menu__screen"
+                    data-screen="mega-mobile-group-307">
+
+                    <div class="mobile-menu__header">
+                        <button type="button" class="mobile-menu__icon-btn" data-back aria-label="Назад">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-back-mask-9" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.4881 4.43057C15.8026 4.70014 15.839 5.17361 15.5694 5.48811L9.98781 12L15.5694 18.5119C15.839 18.8264 15.8026 19.2999 15.4881 19.5695C15.1736 19.839 14.7001 19.8026 14.4306 19.4881L8.43056 12.4881C8.18981 12.2072 8.18981 11.7928 8.43056 11.5119L14.4306 4.51192C14.7001 4.19743 15.1736 4.161 15.4881 4.43057Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-back-mask-9)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                                </button>
+                        <div class="mobile-menu__header-titles">
+                            <span class="mobile-menu__eyebrow">Каталог</span>
+                            <h2 class="mobile-menu__title">Защита кузова и днища</h2>
+                        </div>
+                        <button type="button" class="mobile-menu__icon-btn" data-mobile-menu-close aria-label="Закрыть">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-close-mask-10" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path d="M15.7123 16.773L7.22699 8.28777C6.93708 7.99785 6.93708 7.51702 7.22699 7.22711C7.51691 6.93719 7.99774 6.93719 8.28765 7.22711L16.7729 15.7124C17.0628 16.0023 17.0628 16.4831 16.7729 16.773C16.483 17.063 16.0022 17.063 15.7123 16.773Z" fill="black"/>
+<path d="M7.22706 16.773C6.93715 16.4831 6.93715 16.0023 7.22706 15.7124L15.7123 7.22711C16.0023 6.93719 16.4831 6.93719 16.773 7.22711C17.0629 7.51702 17.0629 7.99785 16.773 8.28777L8.28772 16.773C7.99781 17.063 7.51698 17.063 7.22706 16.773Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-close-mask-10)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                                </button>
+                    </div>
+
+                    <div class="mobile-menu__body">
+                        <ul class="mobile-menu__list">
+                                                        <li>
+                                <a href="/catalog/aksessuary/zashchita-kuzova-i-dnishcha/zashchita-kartera-i-dnishcha/" class="mobile-menu__row">
+                                    <span>Защита картера и днища</span>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="/catalog/aksessuary/zashchita-kuzova-i-dnishcha/zashchitnye-dugi/" class="mobile-menu__row">
+                                    <span>Защитные дуги</span>
+                                </a>
+                            </li>
+                                                    </ul>
+                    </div>
+
+                    <div class="mobile-menu__footer">
+                        <a href="/catalog/aksessuary/zashchita-kuzova-i-dnishcha/" class="mobile-menu__btn mobile-menu__btn--grey">
+                            Смотреть все
+                        </a>
+                    </div>
+
+                </div>
+
+            
+        
+        
+
+        <!-- УСЛУГИ -->
+        <div
+            class="mobile-menu__screen"
+            data-screen="services">
+
+            <div class="mobile-menu__header">
+                <button type="button" class="mobile-menu__icon-btn" data-back aria-label="Назад">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-back-mask-10" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.4881 4.43057C15.8026 4.70014 15.839 5.17361 15.5694 5.48811L9.98781 12L15.5694 18.5119C15.839 18.8264 15.8026 19.2999 15.4881 19.5695C15.1736 19.839 14.7001 19.8026 14.4306 19.4881L8.43056 12.4881C8.18981 12.2072 8.18981 11.7928 8.43056 11.5119L14.4306 4.51192C14.7001 4.19743 15.1736 4.161 15.4881 4.43057Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-back-mask-10)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+                <h2 class="mobile-menu__title">Услуги</h2>
+                <button type="button" class="mobile-menu__icon-btn" data-mobile-menu-close aria-label="Закрыть">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mobile-menu-close-mask-11" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<path d="M15.7123 16.773L7.22699 8.28777C6.93708 7.99785 6.93708 7.51702 7.22699 7.22711C7.51691 6.93719 7.99774 6.93719 8.28765 7.22711L16.7729 15.7124C17.0628 16.0023 17.0628 16.4831 16.7729 16.773C16.483 17.063 16.0022 17.063 15.7123 16.773Z" fill="black"/>
+<path d="M7.22706 16.773C6.93715 16.4831 6.93715 16.0023 7.22706 15.7124L15.7123 7.22711C16.0023 6.93719 16.4831 6.93719 16.773 7.22711C17.0629 7.51702 17.0629 7.99785 16.773 8.28777L8.28772 16.773C7.99781 17.063 7.51698 17.063 7.22706 16.773Z" fill="black"/>
+</mask>
+<g mask="url(#mobile-menu-close-mask-11)">
+<rect width="24" height="24" fill="#111827"/>
+</g>
+</svg>
+                        </button>
+            </div>
+
+            <div class="mobile-menu__body">
+                <ul class="mobile-menu__list">
+                                        <li>
+                        <a href="#" class="mobile-menu__row">
+                            <span>Тюнинг и сервис</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#" class="mobile-menu__row">
+                            <span>Сервисное обслуживание</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#" class="mobile-menu__row">
+                            <span>Сезонное хранение</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#" class="mobile-menu__row">
+                            <span>Доставка по России</span>
+                        </a>
+                    </li>
+                                        <li>
+                        <a href="#" class="mobile-menu__row">
+                            <span>Тех.обслуживание</span>
+                        </a>
+                    </li>
+                                    </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<button
+    type="button"
+    id="scroll-top-btn"
+    class="scroll-top-btn scroll-top-btn--fixed"
+    data-scroll-top-mode="default"
+    aria-label="Наверх страницы">
+
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <mask id="mask0_303_125456" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4697 3.46967C11.7626 3.17678 12.2374 3.17678 12.5303 3.46967L18.5303 9.46967C18.8232 9.76256 18.8232 10.2374 18.5303 10.5303C18.2374 10.8232 17.7626 10.8232 17.4697 10.5303L12.75 5.81066L12.75 20C12.75 20.4142 12.4142 20.75 12 20.75C11.5858 20.75 11.25 20.4142 11.25 20L11.25 5.81066L6.53033 10.5303C6.23744 10.8232 5.76256 10.8232 5.46967 10.5303C5.17678 10.2374 5.17678 9.76256 5.46967 9.46967L11.4697 3.46967Z" fill="black"/>
+        </mask>
+        <g mask="url(#mask0_303_125456)">
+            <rect width="24" height="24" fill="#171717"/>
+        </g>
+    </svg>
+
+</button>
+<div id="pm-cart-overlay" class="pm-cart-overlay"></div>
+
+<aside id="pm-cart" class="pm-cart">
+
+    <!-- HEADER -->
+
+    <div class="pm-cart__header">
+
+        <div class="pm-cart__header-left">
+
+            <div class="pm-cart__header-top">
+
+                <div class="pm-cart__title">
+
+                    Корзина
+
+                </div>
+
+<button
+    id="pm-cart-clear"
+    class="pm-cart__clear"
+    type="button">
+
+    Очистить
+
+</button>
+            </div>
+
+            <div class="pm-cart__subtitle">
+
+                <span id="pm-cart-count-header">
+
+                    0 товаров
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <button
+            id="pm-cart-close"
+            class="pm-cart__close"
+            type="button"
+            aria-label="Закрыть">
+
+            <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none">
+
+                <path
+                    d="M18 6L6 18M6 6L18 18"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"/>
+
+            </svg>
+
+        </button>
+
+    </div>
+
+    <!-- BODY -->
+
+<div class="pm-cart__body">
+
+    <div id="pm-cart-empty"></div>
+
+    <div id="pm-cart-items"></div>
+
+</div>
+    <!-- SUMMARY -->
+
+<div class="pm-cart__summary" id="pm-cart-summary">
+
+    <div class="pm-summary__title">
+        Итого
+    </div>
+
+    <div class="pm-summary__line">
+
+        <span id="pm-cart-count-header-footer">
+            0 товаров
+        </span>
+
+        <strong id="pm-cart-total">
+            0 ₽
+        </strong>
+
+    </div>
+
+</div>
+
+    <!-- FOOTER -->
+
+<div
+    class="pm-cart__footer"
+    id="pm-cart-footer">
+
+<form
+    id="pm-cart-form"
+    autocomplete="off"
+    novalidate>
+    <div class="pm-cart-form__row">
+
+<div class="pm-cart-field-wrap">
+
+<div class="pm-cart-field">
+
+    <span class="pm-cart-label">
+        Ваше имя
+    </span>
+
+    <input
+        class="pm-cart-input"
+        id="pm-name"
+        name="form_text_276"
+        type="text"
+        placeholder="Ваше имя"
+        required>
+
+</div>
+    <div class="pm-error-text"></div>
+
+</div>
+
+<div class="pm-cart-field-wrap">
+
+<div class="pm-cart-field pm-phone-wrap">
+
+    <span class="pm-cart-label">
+        Телефон
+    </span>
+
+    <div class="pm-phone-prefix">
+        +7
+    </div>
+
+    <input
+        class="pm-cart-input pm-phone-input"
+        id="pm-phone"
+        name="form_text_277"
+        type="tel"
+        placeholder="(999) 999-99-99"
+        required>
+
+</div>
+    <div class="pm-error-text"></div>
+
+</div>
+
+</div>
+<div class="pm-cart-policy">
+
+    <label class="pm-cart-policy__label">
+
+        <input
+            type="checkbox"
+            id="pm-policy"
+            name="policy">
+
+        <span class="pm-cart-policy__check"></span>
+
+        <span class="pm-cart-policy__text">
+
+            Я согласен на обработку
+            <a href="/agreement.php" target="_blank">
+                персональных данных
+            </a>
+            и с
+            <a href="/licenses_detail.php" target="_blank">
+                политикой конфиденциальности
+            </a>
+
+        </span>
+
+    </label>
+
+    <div class="pm-error-text"></div>
+
+</div>
+    <input
+        type="hidden"
+        name="form_text_281"
+        id="cart-product">
+
+    <input
+        type="hidden"
+        name="form_text_282"
+        id="cart-count">
+
+    <input
+        type="hidden"
+        name="form_text_292"
+        id="cart-price">
+
+    <button
+        id="pm-send"
+        class="pm-cart-submit"
+        type="submit">
+
+        Отправить заявку
+
+    </button>
+
+</form>
+
+</div>
+
+<div id="pm-cart-alert" class="pm-cart-alert">
+
+    <div class="pm-cart-alert__left">
+
+        <div class="pm-cart-alert__timer">
+            3
+        </div>
+
+        <div class="pm-cart-alert__text">
+            Товар удален
+        </div>
+
+    </div>
+
+    <button
+        type="button"
+        id="pm-cart-alert-undo"
+        class="pm-cart-alert__undo">
+
+        Отменить
+
+    </button>
+
+</div>
+</aside>
+<div id="pm-popup" class="pm-popup">
+
+<div class="pm-popup__box">
+
+    <button
+        id="pm-popup-close-top"
+        class="pm-popup__close"
+        type="button"
+        aria-label="Закрыть">
+
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M18 6L6 18M6 6L18 18"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"/>
+        </svg>
+
+    </button>
+
+    <div class="pm-popup__icon">
+
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="32" fill="#6F82F7"/>
+            <circle cx="32" cy="32" r="12" fill="white"/>
+            <path d="M27.5 32L30.5 35L36.5 29"
+                  stroke="#6F82F7"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+        </svg>
+
+    </div>
+
+    <div class="pm-popup__title" id="pm-popup-title">
+        Получили вашу заявку
+    </div>
+
+    <div class="pm-popup__text" id="pm-popup-text">
+        Свяжемся с вами в ближайшее время!
+    </div>
+
+    <button
+        id="pm-popup-close"
+        class="pm-popup__btn"
+        type="button">
+
+        Отлично
+
+    </button>
+
+</div>
+</div>
+<!-- ===== SITE HEADER END ===== -->
+
+<!-- ===== TLSC: все data-tlsc-* хуки и имена полей сохранены для js/tlsc.js ===== -->
+<main class="tlsc tlsc-root" id="tlsc" data-tlsc-root data-terrain="forest" data-ride="active" data-season="summer">
+    <section class="tlsc-shell">
+        <div class="container tlsc-shell__container">
+            <div class="tlsc-workspace" data-tlsc-workspace>
+
+                <!-- ========== Левая колонка: параметры ========== -->
+                <h1 class="tlsc-title">Подбор техники</h1>
+                <form class="tlsc-controls" id="tlsc-filters" data-tlsc-controls autocomplete="off">
+
+                    <div class="tlsc-control">
+                        <p class="tlsc-control__title" id="tlsc-l-ride">Стиль катания</p>
+                        <div class="tlsc-options" role="radiogroup" aria-labelledby="tlsc-l-ride">
+                            <label class="tlsc-option"><input type="radio" name="ride" value="calm"><span>Спокойный</span></label>
+                            <label class="tlsc-option"><input type="radio" name="ride" value="active" checked><span>Активный</span></label>
+                            <label class="tlsc-option"><input type="radio" name="ride" value="extreme"><span>Экстремальный</span></label>
+                            <label class="tlsc-option"><input type="radio" name="ride" value="expedition"><span>Экспедиционный</span></label>
+                        </div>
+                    </div>
+
+                    <div class="tlsc-control">
+                        <p class="tlsc-control__title" id="tlsc-l-terrain">Среда и рельеф</p>
+                        <div class="tlsc-options" role="radiogroup" aria-labelledby="tlsc-l-terrain">
+                            <label class="tlsc-option"><input type="radio" name="terrain" value="forest" checked><span>Лес</span></label>
+                            <label class="tlsc-option"><input type="radio" name="terrain" value="mountain"><span>Горы</span></label>
+                            <label class="tlsc-option"><input type="radio" name="terrain" value="mud"><span>Грязь</span></label>
+                            <label class="tlsc-option"><input type="radio" name="terrain" value="stone"><span>Камни</span></label>
+                            <label class="tlsc-option"><input type="radio" name="terrain" value="water"><span>Вода</span></label>
+                            <label class="tlsc-option"><input type="radio" name="terrain" value="snow"><span>Снег</span></label>
+                            <label class="tlsc-option"><input type="radio" name="terrain" value="road"><span>Дорога</span></label>
+                        </div>
+                    </div>
+
+                    <div class="tlsc-control">
+                        <p class="tlsc-control__title" id="tlsc-l-season">Сезон</p>
+                        <div class="tlsc-options" role="radiogroup" aria-labelledby="tlsc-l-season">
+                            <label class="tlsc-option"><input type="radio" name="season" value="summer" checked><span>Лето</span></label>
+                            <label class="tlsc-option"><input type="radio" name="season" value="shoulder"><span>Весна/Осень</span></label>
+                            <label class="tlsc-option"><input type="radio" name="season" value="winter"><span>Зима</span></label>
+                            <label class="tlsc-option"><input type="radio" name="season" value="all"><span>Круглый год</span></label>
+                        </div>
+                    </div>
+
+                    <div class="tlsc-control">
+                        <p class="tlsc-control__title" id="tlsc-l-passengers">Вместимость</p>
+                        <div class="tlsc-options" role="radiogroup" aria-labelledby="tlsc-l-passengers">
+                            <label class="tlsc-option"><input type="radio" name="passengers" value="1" aria-label="1 человек"><span>1</span></label>
+                            <label class="tlsc-option"><input type="radio" name="passengers" value="2" checked aria-label="2 человека"><span>2</span></label>
+                            <label class="tlsc-option"><input type="radio" name="passengers" value="3" aria-label="3 и более человек"><span>3+</span></label>
+                        </div>
+                    </div>
+
+                    <div class="tlsc-control tlsc-control--budget">
+                        <div class="tlsc-budget">
+                            <p class="tlsc-budget__market" data-tlsc-budget-market-label>модели каталога появятся на шкале</p>
+                            <div class="tlsc-budget__box">
+                                <strong class="tlsc-budget__value" data-tlsc-budget-label>2 млн ₽</strong>
+                                <div class="tlsc-budget__track">
+                                    <div class="tlsc-market-mini" data-tlsc-market-mini aria-hidden="true"><div data-tlsc-market-points></div></div>
+                                    <input type="range" min="500000" max="9000000" step="100000" value="2000000" name="budget" data-tlsc-budget aria-label="Бюджет">
+                                </div>
+                                <div class="tlsc-budget__labels">
+                                    <span data-tlsc-budget-min>500 тыс. ₽</span>
+                                    <span data-tlsc-budget-mid>4,8 млн ₽</span>
+                                    <span data-tlsc-budget-max>9 млн ₽</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tlsc-refine" data-tlsc-refine>
+                        <button type="button" class="tlsc-precision-toggle" data-tlsc-precision-toggle aria-expanded="false" aria-controls="tlsc-precision-panel">
+                            <span class="tlsc-precision-toggle__title">Экспертные настройки</span>
+                            <span class="tlsc-counter" data-tlsc-expert-count hidden></span>
+                            <span class="tlsc-sr" data-tlsc-precision-summary>Необязательно · без дополнительных ограничений</span>
+                            <em class="tlsc-sr" data-tlsc-precision-status>Без настроек</em>
+                            <i class="tlsc-precision-toggle__chev" aria-hidden="true"></i>
+                        </button>
+                        <div class="tlsc-precision" id="tlsc-precision-panel" data-tlsc-precision aria-hidden="true">
+                            <div class="tlsc-precision__head">
+                                <div><span>Дополнительные приоритеты</span><p>Уточните, что для вас важнее.</p></div>
+                                <button type="button" data-tlsc-precision-reset>Сбросить</button>
+                            </div>
+                            <div class="tlsc-priorities">
+                                <div class="tlsc-priority-scale" aria-hidden="true"><span>Не важно</span><span>Важно</span><span>Максимум</span></div>
+                                <fieldset class="tlsc-priority">
+                                    <legend>Мощность</legend>
+                                    <div class="tlsc-priority__choices">
+                                        <label><input type="radio" name="priority_power" value="0" checked data-tlsc-priority="power"><span>Не важно</span></label>
+                                        <label><input type="radio" name="priority_power" value="1" data-tlsc-priority="power"><span>Важно</span></label>
+                                        <label><input type="radio" name="priority_power" value="2" data-tlsc-priority="power"><span>Максимум</span></label>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="tlsc-priority">
+                                    <legend data-tlsc-priority-name="terrain">Проходимость</legend>
+                                    <div class="tlsc-priority__choices">
+                                        <label><input type="radio" name="priority_terrain" value="0" checked data-tlsc-priority="terrain"><span>Не важно</span></label>
+                                        <label><input type="radio" name="priority_terrain" value="1" data-tlsc-priority="terrain"><span>Важно</span></label>
+                                        <label><input type="radio" name="priority_terrain" value="2" data-tlsc-priority="terrain"><span>Максимум</span></label>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="tlsc-priority">
+                                    <legend>Комфорт</legend>
+                                    <div class="tlsc-priority__choices">
+                                        <label><input type="radio" name="priority_comfort" value="0" checked data-tlsc-priority="comfort"><span>Не важно</span></label>
+                                        <label><input type="radio" name="priority_comfort" value="1" data-tlsc-priority="comfort"><span>Важно</span></label>
+                                        <label><input type="radio" name="priority_comfort" value="2" data-tlsc-priority="comfort"><span>Максимум</span></label>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="tlsc-priority">
+                                    <legend>Практичность</legend>
+                                    <div class="tlsc-priority__choices">
+                                        <label><input type="radio" name="priority_practical" value="0" checked data-tlsc-priority="practical"><span>Не важно</span></label>
+                                        <label><input type="radio" name="priority_practical" value="1" data-tlsc-priority="practical"><span>Важно</span></label>
+                                        <label><input type="radio" name="priority_practical" value="2" data-tlsc-priority="practical"><span>Максимум</span></label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="tlsc-precision__row">
+                                <label class="tlsc-select">
+                                    <span class="tlsc-sr">Бренд</span>
+                                    <select name="brand" data-tlsc-brand><option value="">Бренд</option></select>
+                                </label>
+                                <div class="tlsc-checks">
+                                    <label class="tlsc-check"><input type="checkbox" name="available_only" value="1"><i aria-hidden="true"></i><span>Только в наличии</span></label>
+                                    <label class="tlsc-check"><input type="checkbox" name="strict_budget" value="1"><i aria-hidden="true"></i><span>Строго в бюджете</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- ========== Правая колонка: рекомендация ========== -->
+                <aside class="tlsc-result" data-tlsc-result aria-labelledby="tlsc-result-name">
+                    <div class="tlsc-result__bar">
+                        <span class="tlsc-badge tlsc-badge--accent tlsc-stock"><i class="tlsc-ic tlsc-ic--check" aria-hidden="true"></i><em data-tlsc-color-stock></em></span>
+                        <div class="tlsc-brandmark">
+                            <span class="tlsc-brandmark__logo" data-tlsc-brand-logo-wrap><img data-tlsc-brand-logo alt=""></span>
+                            <span class="tlsc-brandmark__text"><span data-tlsc-product-brand></span> <em data-tlsc-product-year></em></span>
+                        </div>
+                    </div>
+
+                    <div class="tlsc-result__title">
+                        <div class="tlsc-result__heading">
+                            <span class="tlsc-sr">Рекомендация</span>
+                            <h2 id="tlsc-result-name" data-tlsc-product-name></h2>
+                            <p data-tlsc-product-subtitle></p>
+                        </div>
+                        <div class="tlsc-match" aria-label="Совпадение с вашим сценарием">
+                            <strong class="tlsc-match__value"><b data-tlsc-match>—</b><small>%</small></strong>
+                            <div class="tlsc-match__side">
+                                <em data-tlsc-match-caption></em>
+                                <div class="tlsc-line" data-tlsc-match-ring aria-hidden="true"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tlsc-stage" data-tlsc-stage>
+                        <div class="tlsc-stage__thumbs">
+                            <button type="button" class="tlsc-square-btn" data-tlsc-gallery-step="-1" aria-label="Предыдущее фото"><i class="tlsc-ic tlsc-ic--up" aria-hidden="true"></i></button>
+                            <div class="tlsc-gallery" data-tlsc-gallery hidden aria-label="Фотографии модели"></div>
+                            <button type="button" class="tlsc-square-btn" data-tlsc-gallery-step="1" aria-label="Следующее фото"><i class="tlsc-ic tlsc-ic--down" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="tlsc-stage__image-wrap">
+                            <img class="tlsc-stage__image" data-tlsc-product-image alt="">
+                            <div class="tlsc-stage__empty" data-tlsc-product-empty hidden>Изображение модели пока не загружено</div>
+                        </div>
+                        <div class="tlsc-stage__counter" data-tlsc-gallery-counter hidden></div>
+                        <div class="tlsc-stage__no-result" data-tlsc-no-result hidden>
+                            <span>Точного совпадения нет</span>
+                            <p>Измените один из параметров — изображение появится только вместе с реальной рекомендацией.</p>
+                        </div>
+                        <div class="tlsc-scenario-strip" data-tlsc-scenario-strip>
+                            <span class="tlsc-sr">Ваш сценарий</span>
+                            <div class="tlsc-scenario-strip__items">
+                                <span class="tlsc-badge" data-tlsc-scenario-chip="ride">Активный стиль</span>
+                                <span class="tlsc-badge" data-tlsc-scenario-chip="terrain">Лесной маршрут</span>
+                                <span class="tlsc-badge" data-tlsc-scenario-chip="season">Летний сезон</span>
+                                <span class="tlsc-badge" data-tlsc-scenario-chip="passengers">2 человека</span>
+                            </div>
+                        </div>
+                        <div class="tlsc-variants" data-tlsc-variants hidden>
+                            <span class="tlsc-sr">Цвет: <strong data-tlsc-color-name></strong></span>
+                            <div class="tlsc-variants__choices" data-tlsc-color-choices></div>
+                        </div>
+                    </div>
+
+                    <div class="tlsc-price">
+                        <div class="tlsc-price__main">
+                            <span class="tlsc-sr">Стоимость модели</span>
+                            <strong data-tlsc-price></strong>
+                            <em data-tlsc-price-range></em>
+                            <div class="tlsc-price__fit" data-tlsc-budget-fit-wrap><span data-tlsc-budget-fit></span> <b data-tlsc-budget-delta></b></div>
+                        </div>
+                        <div class="tlsc-purchase-actions">
+                            <button type="button" class="product-detail__cart tlsc-cart-button tlsc-btn tlsc-btn--primary" data-tlsc-cart disabled aria-disabled="true"><span class="product-detail__cart-text" data-cart-button-text>Подготовка…</span></button>
+                            <a class="product-detail__buy tlsc-detail-link tlsc-btn tlsc-btn--neutral" data-tlsc-product-link href="#">Открыть модель</a>
+                        </div>
+                    </div>
+
+                    <nav class="tlsc-tabs" aria-label="Разделы подбора" data-tlsc-tabs role="tablist">
+                        <button type="button" class="is-active" data-tlsc-tab="recommendation">Почему подходит</button>
+                        <button type="button" data-tlsc-tab="comparison">Сравнение <span data-tlsc-compare-count></span></button>
+                        <button type="button" data-tlsc-tab="profile">Профиль</button>
+                        <button type="button" data-tlsc-tab="accessories" data-tlsc-accessories-tab hidden>Аксессуары <span data-tlsc-accessories-count></span></button>
+                    </nav>
+
+                    <div class="tlsc-panels">
+                        <section class="tlsc-panel is-active" data-tlsc-panel="recommendation">
+                            <div class="tlsc-metrics">
+                                <div class="tlsc-metric"><span>Мощность</span><i><b data-tlsc-metric="power"></b></i><em data-tlsc-metric-value="power"></em></div>
+                                <div class="tlsc-metric"><span data-tlsc-metric-label="terrain">Проходимость</span><i><b data-tlsc-metric="terrain"></b></i><em data-tlsc-metric-value="terrain"></em></div>
+                                <div class="tlsc-metric"><span>Комфорт</span><i><b data-tlsc-metric="comfort"></b></i><em data-tlsc-metric-value="comfort"></em></div>
+                                <div class="tlsc-metric"><span>Практичность</span><i><b data-tlsc-metric="universal"></b></i><em data-tlsc-metric-value="universal"></em></div>
+                            </div>
+                            <div class="tlsc-reasons" data-tlsc-reasons>
+                                <div class="tlsc-reason"><span>01</span><p><strong data-tlsc-reason-title="0">Под ваш рельеф</strong><em data-tlsc-reason-text="0">Подбор учитывает выбранные условия маршрута.</em></p></div>
+                                <div class="tlsc-reason"><span>02</span><p><strong data-tlsc-reason-title="1">Под ваш темп</strong><em data-tlsc-reason-text="1">Характер модели сопоставляется со стилем катания.</em></p></div>
+                                <div class="tlsc-reason"><span>03</span><p><strong data-tlsc-reason-title="2">Под ваш сценарий</strong><em data-tlsc-reason-text="2">Учитываем сезон, вместимость и бюджет.</em></p></div>
+                            </div>
+                        </section>
+
+                        <section class="tlsc-panel" data-tlsc-panel="comparison">
+                            <div class="tlsc-panel-title"><span>Техническое сравнение</span><em>Только близкие по сценарию модели</em></div>
+                            <div class="tlsc-compare__selector" data-tlsc-compare-selector></div>
+                            <!-- Карточка сравниваемой модели | разделитель | таблица справа. Основная модель не дублируется (скрыта) -->
+                            <div class="tlsc-compare">
+                                <article class="tlsc-compare-card tlsc-compare-card--main" hidden><span>Рекомендация</span><div class="tlsc-compare-card__image"><img data-tlsc-compare-main-image alt=""></div><strong data-tlsc-compare-main-name></strong><em data-tlsc-compare-main-price></em></article>
+                                <article class="tlsc-compare-card"><span class="tlsc-sr" data-tlsc-compare-role>Альтернатива</span><div class="tlsc-compare-card__image"><img data-tlsc-compare-alt-image alt=""></div><div class="tlsc-compare-card__info"><strong data-tlsc-compare-alt-name></strong><em data-tlsc-compare-alt-price></em><a data-tlsc-compare-alt-link href="#">Открыть модель</a></div></article>
+                                <div class="tlsc-compare__versus" aria-hidden="true"></div>
+                                <div class="tlsc-compare-table" data-tlsc-compare-table></div>
+                            </div>
+                            <div class="tlsc-compare-verdict" data-tlsc-compare-verdict></div>
+                            <p class="tlsc-empty-note" data-tlsc-compare-empty>Для этого сценария нет достаточно близкой альтернативы.</p>
+                        </section>
+
+<section class="tlsc-panel tlsc-panel--profile" data-tlsc-panel="profile">
+                            <div class="tlsc-panel-title tlsc-profile-heading">
+                                <span>Характер модели</span>
+                                <em>5 ключевых параметров рекомендации</em>
+                            </div>
+
+                            <div class="tlsc-profile tlsc-profile--premium">
+                                <div class="tlsc-profile__chart">
+                                    <div class="tlsc-profile__visual" aria-label="Пятиугольный профиль выбранной модели">
+                                        <svg viewBox="50 35 200 191" role="img" aria-hidden="true">
+                                            <g class="tlsc-profile__grid">
+                                                <polygon points="150,40 245.1,109.1 208.8,220.9 91.2,220.9 54.9,109.1"></polygon>
+                                                <polygon points="150,65 221.3,116.8 194.1,200.7 105.9,200.7 78.7,116.8"></polygon>
+                                                <polygon points="150,90 197.6,124.5 179.4,180.5 120.6,180.5 102.4,124.5"></polygon>
+                                                <polygon points="150,115 173.8,132.3 164.7,160.2 135.3,160.2 126.2,132.3"></polygon>
+                                                <path d="M150 40L150 140M245.1 109.1L150 140M208.8 220.9L150 140M91.2 220.9L150 140M54.9 109.1L150 140"></path>
+                                            </g>
+                                            <polygon class="tlsc-profile__shape" data-tlsc-profile-shape points="150,74 208,121 184,187 112,192 91,121"></polygon>
+                                            <g class="tlsc-profile__dots">
+                                                <circle data-tlsc-profile-dot="0" cx="150" cy="74" r="4"></circle>
+                                                <circle data-tlsc-profile-dot="1" cx="208" cy="121" r="4"></circle>
+                                                <circle data-tlsc-profile-dot="2" cx="184" cy="187" r="4"></circle>
+                                                <circle data-tlsc-profile-dot="3" cx="112" cy="192" r="4"></circle>
+                                                <circle data-tlsc-profile-dot="4" cx="91" cy="121" r="4"></circle>
+                                            </g>
+                                            <circle class="tlsc-profile__center" cx="150" cy="140" r="3"></circle>
+                                        </svg>
+
+                                        <span class="tlsc-profile-axis tlsc-profile-axis--drive">Динамика</span>
+                                        <span class="tlsc-profile-axis tlsc-profile-axis--terrain">Проходимость</span>
+                                        <span class="tlsc-profile-axis tlsc-profile-axis--comfort">Комфорт</span>
+                                        <span class="tlsc-profile-axis tlsc-profile-axis--range">Автономность</span>
+                                        <span class="tlsc-profile-axis tlsc-profile-axis--practical">Практичность</span>
+                                    </div>
+                                </div>
+
+                                <div class="tlsc-profile__copy">
+                                    <span>Профиль рекомендации</span>
+                                    <h3 data-tlsc-profile-title>Сбалансированный характер</h3>
+                                    <p data-tlsc-profile-text>Пятиугольник показывает характер выбранной модели по данным каталога и текущему сценарию.</p>
+                                    <div class="tlsc-profile__legend" data-tlsc-profile-legend></div>
+                                </div>
+                            </div>
+                        </section>
+
+                        
+                        <section class="tlsc-panel tlsc-panel--accessories" data-tlsc-panel="accessories">
+                            <div class="tlsc-panel-title"><span>Совместимые аксессуары</span><em data-tlsc-accessories-caption>Только подтверждённая совместимость</em></div>
+                            <p class="tlsc-accessories__intro">Показываем только аксессуары с подтверждённой совместимостью именно с этой моделью.</p>
+                            <div class="tlsc-accessories" data-tlsc-accessories></div>
+                        </section>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Как мы пришли к этому выбору ========== -->
+    <section class="tlsc-journey" data-tlsc-journey aria-labelledby="tlsc-journey-title">
+        <div class="container tlsc-journey__container">
+            <h2 class="tlsc-section-title" id="tlsc-journey-title">Как мы пришли к этому выбору</h2>
+
+            <div class="tlsc-journey__steps" aria-label="Этапы отбора модели">
+                <article class="tlsc-journey-step" data-tlsc-journey-step="catalog">
+                    <div class="tlsc-journey-step__top"><b>1</b><span>Весь каталог</span></div>
+                    <div class="tlsc-journey-step__count"><strong data-tlsc-journey-count="catalog">703</strong><em data-tlsc-journey-word="catalog">моделей</em></div>
+                    <span class="tlsc-journey-step__delta" data-tlsc-journey-delta="catalog">Старт</span>
+                    <div class="tlsc-journey-step__cloud" data-tlsc-journey-cloud="catalog" aria-hidden="true"></div>
+                    <p data-tlsc-journey-note="catalog">Все активные модели техники</p>
+                </article>
+                <article class="tlsc-journey-step" data-tlsc-journey-step="compatible">
+                    <div class="tlsc-journey-step__top"><b>2</b><span>Среда и сезон</span></div>
+                    <div class="tlsc-journey-step__count"><strong data-tlsc-journey-count="compatible">—</strong><em data-tlsc-journey-word="compatible">моделей</em></div>
+                    <span class="tlsc-journey-step__delta" data-tlsc-journey-delta="compatible"></span>
+                    <div class="tlsc-journey-step__cloud" data-tlsc-journey-cloud="compatible" aria-hidden="true"></div>
+                    <p data-tlsc-journey-note="compatible">Оставляем только технически совместимые типы техники.</p>
+                </article>
+                <article class="tlsc-journey-step" data-tlsc-journey-step="constrained">
+                    <div class="tlsc-journey-step__top"><b>3</b><span>Вместимость и фильтры</span></div>
+                    <div class="tlsc-journey-step__count"><strong data-tlsc-journey-count="constrained">—</strong><em data-tlsc-journey-word="constrained">моделей</em></div>
+                    <span class="tlsc-journey-step__delta" data-tlsc-journey-delta="constrained"></span>
+                    <div class="tlsc-journey-step__cloud" data-tlsc-journey-cloud="constrained" aria-hidden="true"></div>
+                    <p data-tlsc-journey-note="constrained">Проверяем места и выбранные экспертные ограничения.</p>
+                </article>
+                <article class="tlsc-journey-step" data-tlsc-journey-step="scenario">
+                    <div class="tlsc-journey-step__top"><b>4</b><span>Близки по сценарию</span></div>
+                    <div class="tlsc-journey-step__count"><strong data-tlsc-journey-count="scenario">—</strong><em data-tlsc-journey-word="scenario">моделей</em></div>
+                    <span class="tlsc-journey-step__delta" data-tlsc-journey-delta="scenario"></span>
+                    <div class="tlsc-journey-step__cloud" data-tlsc-journey-cloud="scenario" aria-hidden="true"></div>
+                    <p data-tlsc-journey-note="scenario">Сравниваем характер, среду, назначение и базовый баланс.</p>
+                </article>
+                <article class="tlsc-journey-step tlsc-journey-step--final" data-tlsc-journey-step="finalists">
+                    <div class="tlsc-journey-step__top"><b>5</b><span>Финалисты</span></div>
+                    <div class="tlsc-journey-step__count"><strong data-tlsc-journey-count="finalists">—</strong><em data-tlsc-journey-word="finalists">модели</em></div>
+                    <span class="tlsc-journey-step__delta" data-tlsc-journey-delta="finalists"></span>
+                    <div class="tlsc-journey-step__cloud" data-tlsc-journey-cloud="finalists" aria-hidden="true"></div>
+                    <p data-tlsc-journey-note="finalists">Четыре лучших реальных кандидата для финального сравнения.</p>
+                </article>
+            </div>
+
+            <div class="tlsc-journey__final">
+                <aside class="tlsc-journey-finalists" data-tlsc-journey-finalists>
+                    <h3 class="tlsc-journey-finalists__title">Финальный выбор <span class="tlsc-sr">· <em data-tlsc-journey-finalists-count>0</em></span></h3>
+                    <div class="tlsc-journey-finalists__list" data-tlsc-journey-finalists-list></div>
+                    <div class="tlsc-journey-finalists__nav" hidden>
+                        <button type="button" data-tlsc-journey-prev aria-label="Предыдущий финалист">←</button>
+                        <span><i data-tlsc-journey-progress></i></span>
+                        <button type="button" data-tlsc-journey-next aria-label="Следующий финалист">→</button>
+                    </div>
+                </aside>
+
+                <article class="tlsc-journey-result" data-tlsc-journey-result>
+                    <div class="tlsc-journey-result__image">
+                        <div class="tlsc-journey-result__word" data-tlsc-journey-wordmark hidden></div>
+                        <img data-tlsc-journey-image alt="">
+                    </div>
+                    <div class="tlsc-journey-result__info">
+                        <div class="tlsc-journey-result__copy">
+                            <div class="tlsc-journey-result__bar">
+                                <span class="tlsc-badge tlsc-badge--accent"><i class="tlsc-ic tlsc-ic--check" aria-hidden="true"></i><span data-tlsc-journey-result-label>Рекомендация</span></span>
+                                <div class="tlsc-brandmark">
+                                    <span class="tlsc-brandmark__logo" data-tlsc-journey-logo-wrap><img data-tlsc-journey-logo alt=""></span>
+                                    <span class="tlsc-brandmark__text"><span data-tlsc-journey-brand></span> <em data-tlsc-journey-year></em></span>
+                                </div>
+                            </div>
+                            <h3 data-tlsc-journey-name></h3>
+                            <strong class="tlsc-journey-result__price" data-tlsc-journey-price></strong>
+                            <p data-tlsc-journey-verdict></p>
+                            <span class="tlsc-sr" data-tlsc-journey-caption></span>
+                        </div>
+                        <div class="tlsc-journey-result__foot">
+                            <div class="tlsc-match tlsc-journey-result__match">
+                                <strong class="tlsc-match__value"><b data-tlsc-journey-match>—</b><small>%</small></strong>
+                                <div class="tlsc-match__side">
+                                    <em data-tlsc-journey-epithet></em>
+                                    <div class="tlsc-line" data-tlsc-journey-ring aria-hidden="true"></div>
+                                </div>
+                            </div>
+                            <a class="tlsc-btn tlsc-btn--neutral" data-tlsc-journey-link href="#">Открыть модель</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== Среда (territory) ========== -->
+    <section class="tlsc-territory" data-tlsc-territory data-terrain="forest" data-tlsc-territory-assets="/local/templates/turbolemons-template/img" aria-labelledby="tlsc-territory-title">
+        <div class="container tlsc-territory__container">
+            <div class="tlsc-territory__stage" data-tlsc-territory-stage>
+                <div class="tlsc-territory__words" aria-label="Смена среды">
+                    <button type="button" class="tlsc-territory__word tlsc-territory__word--far-prev" data-tlsc-territory-far-prev data-terrain-target="snow" aria-label="Выбрать среду"><span data-tlsc-territory-far-prev-word>СНЕГ</span></button>
+                    <button type="button" class="tlsc-territory__word tlsc-territory__word--prev" data-tlsc-territory-prev data-terrain-target="road" aria-label="Выбрать предыдущую среду: Дорога"><span data-tlsc-territory-prev-word>ДОРОГА</span></button>
+                    <h2 id="tlsc-territory-title" class="tlsc-territory__word tlsc-territory__word--active" data-tlsc-territory-word>ЛЕС</h2>
+                    <button type="button" class="tlsc-territory__word tlsc-territory__word--next" data-tlsc-territory-next data-terrain-target="mountain" aria-label="Выбрать следующую среду: Горы"><span data-tlsc-territory-next-word>ГОРЫ</span></button>
+                    <button type="button" class="tlsc-territory__word tlsc-territory__word--far-next" data-tlsc-territory-far-next data-terrain-target="mud" aria-label="Выбрать среду"><span data-tlsc-territory-far-next-word>ГРЯЗЬ</span></button>
+                </div>
+                <div class="tlsc-territory__visual" data-tlsc-territory-visual>
+                    <div class="tlsc-territory__backdrop" data-tlsc-territory-backdrop aria-hidden="true"></div>
+                    <img class="tlsc-territory__ghost" data-tlsc-territory-ghost alt="" hidden>
+                    <img class="tlsc-territory__machine is-fallback" alt="" data-tlsc-territory-image>
+                </div>
+            </div>
+            <div class="tlsc-territory__bottom">
+                <div class="tlsc-territory__model" aria-live="polite">
+                    <div class="tlsc-territory__model-meta"><span data-tlsc-territory-brand></span><i aria-hidden="true">·</i><em data-tlsc-territory-year></em></div>
+                    <strong data-tlsc-territory-model></strong>
+                </div>
+                <a class="tlsc-btn tlsc-btn--neutral tlsc-territory__link" data-tlsc-territory-link href="#">Открыть модель</a>
+                <div class="tlsc-territory__statement">
+                    <span data-tlsc-territory-ride></span>
+                    <strong data-tlsc-territory-line></strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div class="tlsc-passport" data-tlsc-passport aria-hidden="true">
+        <button type="button" class="tlsc-passport__backdrop" data-tlsc-passport-close aria-label="Закрыть"></button>
+        <section class="tlsc-passport__card" role="dialog" aria-modal="true" aria-labelledby="tlsc-passport-title">
+            <button type="button" class="tlsc-passport__close" data-tlsc-passport-close aria-label="Закрыть"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+
+            <div class="tlsc-passport__topline">
+                <div class="tlsc-passport__eyebrow"><span>Ваш подбор</span><em>Turbolemons</em></div>
+                <span class="tlsc-passport__topnote">Персональная рекомендация по данным каталога</span>
+            </div>
+
+            <div class="tlsc-passport__hero">
+                <div class="tlsc-passport__hero-copy">
+                    <span>Ваш сценарий</span>
+                    <h2 id="tlsc-passport-title" data-tlsc-passport-profile></h2>
+                    <p>Параметры сопоставлены с реальными характеристиками техники в каталоге Turbolemons.</p>
+                </div>
+                <div class="tlsc-passport__matchbox">
+                    <span>Совпадение</span>
+                    <div class="tlsc-passport__match-ring" data-tlsc-passport-match-ring style="--match:92">
+                        <strong data-tlsc-passport-match>92%</strong>
+                    </div>
+                    <em data-tlsc-passport-match-caption>Отлично подходит</em>
+                </div>
+            </div>
+
+            <div class="tlsc-passport__product">
+                <div class="tlsc-passport__image">
+                    <img data-tlsc-passport-image alt="">
+                </div>
+                <div class="tlsc-passport__product-copy">
+                    <div class="tlsc-passport__brandline">
+                        <div class="tlsc-passport__brand-logo" data-tlsc-passport-brand-logo-wrap hidden>
+                            <img data-tlsc-passport-brand-logo alt="">
+                        </div>
+                        <span data-tlsc-passport-brand></span>
+                        <i aria-hidden="true"></i>
+                        <em data-tlsc-passport-year></em>
+                    </div>
+                    <span class="tlsc-passport__product-label">Рекомендация</span>
+                    <h3 data-tlsc-passport-name></h3>
+                    <strong data-tlsc-passport-price></strong>
+                    <a class="tlsc-passport__product-link" data-tlsc-passport-link href="/catalog/">Открыть модель →</a>
+                </div>
+            </div>
+
+            <div class="tlsc-passport__details">
+                <div class="tlsc-passport__section-head">
+                    <span>Параметры подбора</span>
+                    <em>Что система учла в рекомендации</em>
+                </div>
+                <div class="tlsc-passport__facts" data-tlsc-passport-facts></div>
+            </div>
+
+            <div class="tlsc-passport__footer">
+                <div class="tlsc-passport__footer-copy">
+                    <span>Сохраните результат</span>
+                    <p>Карточку можно сохранить, скопировать для менеджера или отправить через системное меню устройства.</p>
+                </div>
+                <div class="tlsc-passport__actions">
+                    <button type="button" data-tlsc-passport-save>Сохранить карточкой</button>
+                    <button type="button" data-tlsc-passport-copy>Скопировать для менеджера</button>
+                    <button type="button" data-tlsc-passport-share>Поделиться</button>
+                </div>
+            </div>
+            <p class="tlsc-passport__status" data-tlsc-passport-status aria-live="polite"></p>
+        </section>
+    </div>
+
+    
+
+</main>
+<!-- ===== TLSC END ===== -->
+
+
+<!-- ===== SITE FOOTER ===== -->
+<footer class="footer">
+
+    <div class="footer__container container">
+
+        <!-- ===================================== -->
+        <!-- Callback -->
+        <!-- ===================================== -->
+
+        <section class="footer__callback">
+
+            <div class="footer__callback-info">
+
+                <h2 class="footer__title">
+                    Заказать обратный звонок
+                </h2>
+
+                <p class="footer__subtitle">
+                    Остались вопросы? Оставьте заявку —
+                    <br>
+                    мы свяжемся с вами в ближайшее время
+                </p>
+
+            </div>
+
+            <form
+                class="footer__form"
+                id="footer-callback-form"
+                autocomplete="off"
+                novalidate>
+
+                <div class="pm-cart-field-wrap">
+
+                    <div class="pm-cart-field">
+
+                        <input
+                            class="pm-cart-input"
+                            id="footer-callback-name"
+                            type="text"
+                            placeholder=" "
+                            required>
+
+                        <span class="pm-cart-label">
+                            Ваше имя<span class="pm-required-mark">*</span>
+                        </span>
+
+                    </div>
+
+                    <div class="pm-error-text"></div>
+
+                </div>
+
+                <div class="pm-cart-field-wrap">
+
+                    <div class="pm-cart-field pm-phone-wrap">
+
+                        <span class="pm-cart-label">
+                            Телефон
+                        </span>
+
+                        <div class="pm-phone-prefix">
+                            +7
+                        </div>
+
+                        <div class="buy-modal__phone-field">
+
+                            <input
+                                class="pm-cart-input pm-phone-input"
+                                id="footer-callback-phone"
+                                type="tel"
+                                placeholder=" "
+                                required>
+
+                            <span
+                                class="buy-modal__phone-placeholder"
+                                id="footer-callback-phone-placeholder"
+                                aria-hidden="true">
+
+                                (999) 999-99-99<span class="pm-required-mark">*</span>
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="pm-error-text"></div>
+
+                </div>
+
+                <div class="pm-cart-policy">
+
+                    <label class="pm-cart-policy__label">
+
+                        <input
+                            type="checkbox"
+                            id="footer-callback-policy">
+
+                        <span class="pm-cart-policy__check"></span>
+
+                        <span class="pm-cart-policy__text">
+
+                            Я согласен на обработку
+                            <a href="/agreement.php" target="_blank">
+                                персональных данных
+                            </a>
+                            и с
+                            <a href="/licenses_detail.php" target="_blank">
+                                политикой конфиденциальности
+                            </a>
+
+                        </span>
+
+                    </label>
+
+                    <div class="pm-error-text"></div>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="footer__submit"
+                    id="footer-callback-submit">
+
+                    ОТПРАВИТЬ
+
+                </button>
+
+            </form>
+
+            <!-- Успех отправки - те же 240px, что и у формы -->
+
+            <div
+                class="footer__form-success"
+                id="footer-callback-success"
+                hidden>
+
+                <div class="footer__form-success-icon">
+
+                    <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+                        <rect width="56" height="56" fill="white" fill-opacity="0.24"/>
+                        <mask id="footer-success-icon-mask" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="12" y="12" width="32" height="32">
+                            <path d="M25.4755 34.3643C25.1199 34.3643 24.7821 34.2221 24.5333 33.9732L19.5021 28.9421C18.9866 28.4265 18.9866 27.5732 19.5021 27.0576C20.0177 26.5421 20.871 26.5421 21.3866 27.0576L25.4755 31.1465L34.6133 22.0087C35.1288 21.4932 35.9821 21.4932 36.4977 22.0087C37.0133 22.5243 37.0133 23.3776 36.4977 23.8932L26.4177 33.9732C26.1688 34.2221 25.831 34.3643 25.4755 34.3643Z" fill="black"/>
+                        </mask>
+                        <g mask="url(#footer-success-icon-mask)">
+                            <rect x="12" y="12" width="32" height="32" fill="white"/>
+                        </g>
+                    </svg>
+
+                </div>
+
+                <div class="footer__form-success-title">
+                    Получили вашу заявку
+                </div>
+
+                <div class="footer__form-success-text">
+                    Свяжемся с вами в ближайшее время!
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="footer__divider"></div>
+        <!-- ===================================== -->
+        <!-- Main -->
+        <!-- ===================================== -->
+
+        <section class="footer__main">
+
+<div class="footer__menus">
+
+    <!-- КАТАЛОГ -->
+
+    <div class="footer__menu-column">
+
+        <h3 class="footer__menu-title">
+            Каталог
+        </h3>
+
+        <nav class="footer__menu">
+            <div class="footer__menu-inner">
+
+                
+                    <a href="/catalog/buggi/">
+                        Багги                    </a>
+
+                
+                    <a href="/catalog/snegohodi/">
+                        Снегоходы                    </a>
+
+                
+                    <a href="/catalog/kvadrocikly/">
+                        Квадроциклы                    </a>
+
+                
+                    <a href="/catalog/gidrocikly/">
+                        Гидроциклы                    </a>
+
+                
+                    <a href="/catalog/motorcycles/">
+                        Мотоциклы                    </a>
+
+                
+                    <a href="/catalog/tricikly/">
+                        Трициклы                    </a>
+
+                
+                    <a href="/catalog/aksessuary/">
+                        Аксессуары и тюнинг                    </a>
+
+                
+            </div>
+        </nav>
+
+    </div>
+
+
+    <!-- ПОКУПАТЕЛЯМ -->
+
+    <div class="footer__menu-column">
+
+        <h3 class="footer__menu-title">
+            Покупателям
+        </h3>
+
+        <nav class="footer__menu">
+            <div class="footer__menu-inner">
+
+                <a href="/about/">О компании</a>
+                <a href="/delivery/">Доставка и оплата</a>
+                <!-- <a href="#">Гарантия и возврат</a> -->
+                <a href="/contacts/">Контакты</a>
+                <a href="/blog/">Блог</a>
+
+            </div>
+        </nav>
+
+    </div>
+
+</div>
+            <aside class="footer__right">
+
+                <a
+                    href="/"
+                    class="footer__logo">
+
+                    <img
+                        src="/local/templates/turbolemons-template/img/logo-white.svg"
+                        alt="TurboLemons">
+
+                </a>
+
+                <div class="footer__contacts">
+
+                    <span class="footer__contacts-title">
+                        Контакты
+                    </span>
+
+                    <a
+                        href="tel:+78003011733"
+                        class="footer__phone-link">
+
+                        +7 (800) 301-17-33
+
+                    </a>
+
+                    <a
+                        href="mailto:info@turbolemons.ru"
+                        class="footer__email">
+
+                        info@turbolemons.ru
+
+                    </a>
+
+                </div>
+
+                <div class="footer__social">
+
+                    <span class="footer__contacts-title">
+                        Социальные сети
+                    </span>
+
+<div class="footer__social-list">
+
+    <a href="https://vk.ru/turbo_lemons" class="footer__social-link" target="_blank">
+
+        <span class="footer__social-icon">
+
+            <img class="footer__social-white" src="/local/templates/turbolemons-template/img/vk.svg" alt="">
+            <img class="footer__social-color" src="/local/templates/turbolemons-template/img/vk-color.svg" alt="">
+
+        </span>
+
+    </a>
+<!-- 
+    <a href="#" class="footer__social-link">
+
+        <span class="footer__social-icon">
+
+            <img class="footer__social-white" src="/local/templates/turbolemons-template/img/yt.svg" alt="">
+            <img class="footer__social-color" src="/local/templates/turbolemons-template/img/yt-color.svg" alt="">
+
+        </span>
+
+    </a> -->
+
+    <!-- <a href="#" class="footer__social-link">
+
+        <span class="footer__social-icon">
+
+            <img class="footer__social-white" src="/local/templates/turbolemons-template/img/wa.svg" alt="">
+            <img class="footer__social-color" src="/local/templates/turbolemons-template/img/wa-color.svg" alt="">
+
+        </span>
+
+    </a> -->
+
+    <!-- <a href="#" class="footer__social-link">
+
+        <span class="footer__social-icon">
+
+            <img class="footer__social-white" src="/local/templates/turbolemons-template/img/max-white.svg" alt="">
+            <img class="footer__social-color" src="/local/templates/turbolemons-template/img/max-color.svg" alt="">
+
+        </span>
+
+    </a> -->
+
+    <a href="https://t.me/+bRjlmjDUslYxNWM6" class="footer__social-link" target="_blank">
+
+        <span class="footer__social-icon">
+
+            <img class="footer__social-white" src="/local/templates/turbolemons-template/img/telegram-white.svg" alt="">
+            <img class="footer__social-color" src="/local/templates/turbolemons-template/img/tg-color.svg" alt="">
+
+        </span>
+
+    </a>
+
+    <!-- <a href="#" class="footer__social-link">
+
+        <span class="footer__social-icon">
+
+            <img class="footer__social-white" src="/local/templates/turbolemons-template/img/tiktok.svg" alt="">
+            <img class="footer__social-color" src="/local/templates/turbolemons-template/img/ticktock-color.svg" alt="">
+
+        </span>
+
+    </a> -->
+
+    <a href="https://rutube.ru/channel/80598210/?ysclid=mth0e6ix6z980759191" target="_blank" class="footer__social-link">
+
+        <span class="footer__social-icon">
+
+            <img class="footer__social-white" src="/local/templates/turbolemons-template/img/rutube.svg" alt="">
+            <img class="footer__social-color" src="/local/templates/turbolemons-template/img/rt-color.svg" alt="">
+
+        </span>
+
+    </a>
+
+</div>
+                </div>
+
+            </aside>
+
+        </section>
+
+        <div class="footer__divider"></div>
+        <!-- ===================================== -->
+        <!-- Bottom -->
+        <!-- ===================================== -->
+
+<section class="footer__bottom">
+
+    <div class="footer__copyright">
+        © Turbolemons, 2026. Все права защищены. Не является публичной офертой
+    </div>
+
+    <nav class="footer__bottom-menu">
+
+        <a href="/licenses_detail.php">
+            Политика конфиденциальности
+        </a>
+
+        <a href="/agreement.php">
+            Политика обработки персональных данных
+        </a>
+
+    </nav>
+
+</section>
+    </div>
+
+</footer>
+
+<script src="vendor/site.js"></script>
+<script src="vendor/cart.js"></script>
+<script src="data/catalog.js"></script>
+<script src="js/tlsc.js"></script>
+<script src="js/enhance.js"></script>
+</body>
+</html>

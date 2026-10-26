@@ -1,0 +1,105 @@
+/* Адаптив по дизайну: 1200–1439 — раскладка 1440 · <1200 — дизайн 768 (Table) · <768 — дизайн 393 (Mobile).
+   <1200: параметры подбора — в шторке «Фильтры», кнопка прикреплена к низу экрана. */
+
+/* ---------- <1200: одна колонка ---------- */
+@media (max-width: 1199px) {
+  .tlsc-root { padding-bottom: 80px; } /* место под кнопку «Фильтры» */
+  .tlsc-shell { padding: var(--tlsc-s-32) 0; }
+  .tlsc-workspace { gap: var(--tlsc-s-32); }
+
+  /* Рекомендация: плашка · фото · название · совпадение · цена и кнопки · вкладки */
+  .tlsc-result { gap: var(--tlsc-s-24); }
+  .tlsc-result__title { display: contents; }
+  .tlsc-result__bar { order: 1; }
+  .tlsc-stage { order: 2; }
+  .tlsc-result__heading { order: 3; }
+  .tlsc-match { order: 4; width: 100%; }
+  .tlsc-price { order: 5; }
+  .tlsc-tabs { order: 6; }
+  .tlsc-panels { order: 7; }
+
+  /* Сцена 376: бейджи сверху · фото 287×225 · миниатюры в ряд со стрелками */
+  .tlsc-stage { flex-direction: column; align-items: center; min-height: 0; padding: var(--tlsc-s-16); }
+  .tlsc-scenario-strip { position: static; order: 1; align-self: stretch; overflow: hidden; }
+  .tlsc-scenario-strip__items { flex-wrap: nowrap; justify-content: flex-start; }
+  .tlsc-stage__image-wrap { position: static; order: 2; width: 100%; height: 262px; }
+  .tlsc-stage__image { width: min(287px, 100%); height: 225px; }
+  .tlsc-stage__thumbs { --tlsc-thumbs: 3; order: 3; flex-direction: row; align-self: center; }
+  .tlsc-stage__thumbs .tlsc-square-btn:last-child { margin-top: 0; }
+  .tlsc-ic--up, .tlsc-ic--down { transform: none; } /* ← → */
+  .tlsc-gallery { flex-direction: row; max-height: none; max-width: calc(var(--tlsc-thumbs) * 56px + (var(--tlsc-thumbs) - 1) * 12px + 8px); }
+  .tlsc-variants { position: static; order: 4; margin-top: var(--tlsc-s-16); }
+
+  .tlsc-price { flex-direction: column; align-items: stretch; gap: var(--tlsc-s-24); }
+  .tlsc-price__main strong { white-space: normal; }
+
+  /* Сравнение и профиль — в колонку */
+  .tlsc-compare { grid-template-columns: minmax(0, 1fr); }
+  .tlsc-compare__versus, .tlsc-profile::after { display: none; }
+  .tlsc-profile { grid-template-columns: minmax(0, 1fr); }
+  .tlsc-profile__copy { grid-column: 1; grid-row: 2; }
+
+  /* ----- Шторка «Фильтры» ----- */
+  .tlsc-controls { position: fixed; left: 0; right: 0; bottom: 0; z-index: 1200; max-height: calc(100dvh - 48px); overflow-y: auto; overscroll-behavior: contain;
+    padding: 0 16px calc(24px + env(safe-area-inset-bottom)); background: var(--tlsc-surface); box-shadow: var(--tlsc-shadow);
+    transform: translateY(100%); visibility: hidden; transition: transform 280ms var(--tlsc-ease), visibility 0s 280ms; }
+  .tlsc-root.is-filters-open .tlsc-controls { transform: none; visibility: visible; transition: transform 280ms var(--tlsc-ease); }
+  .tlsc-sheet__head { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: var(--tlsc-s-16); margin: 0 -16px; padding: var(--tlsc-s-16);
+    background: var(--tlsc-surface); border-bottom: 1px solid var(--tlsc-border); }
+  .tlsc-sheet__head span { font-family: var(--tlsc-font-display); font-style: italic; font-weight: 700; font-size: var(--tlsc-h4); line-height: var(--tlsc-h4-lh); text-transform: uppercase; }
+  .tlsc-sheet__close { position: relative; }
+  .tlsc-sheet__close::before, .tlsc-sheet__close::after { content: ''; position: absolute; left: 14px; top: 23px; width: 20px; height: 2px; background: var(--tlsc-text); transform: rotate(45deg); }
+  .tlsc-sheet__close::after { transform: rotate(-45deg); }
+  .tlsc-sheet-backdrop { position: fixed; inset: 0; z-index: 1150; background: var(--tlsc-overlay); opacity: 0; visibility: hidden; transition: opacity 280ms, visibility 0s 280ms; }
+  .tlsc-root.is-filters-open .tlsc-sheet-backdrop { opacity: 1; visibility: visible; transition: opacity 280ms; }
+  .tlsc-filters-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 1100; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: var(--tlsc-surface); border-top: 1px solid var(--tlsc-border); }
+  .tlsc-filters-bar .tlsc-btn { width: 100%; }
+  .b24-widget-button-wrapper { bottom: 92px !important; }
+
+  /* ----- Как мы пришли к этому выбору (дизайн 768) ----- */
+  .tlsc-journey { padding: var(--tlsc-s-32) 0; }
+  .tlsc-journey__container { gap: var(--tlsc-s-48); }
+  .tlsc-journey__steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tlsc-journey-step--final { grid-column: 1 / -1; }
+  .tlsc-journey-step { gap: var(--tlsc-s-8); padding: 0 var(--tlsc-s-16) var(--tlsc-s-16); }
+  .tlsc-journey-step::before, .tlsc-journey-step::after { display: none !important; }
+  .tlsc-journey__final { grid-template-columns: minmax(0, 1fr); row-gap: var(--tlsc-s-16); }
+  .tlsc-journey-finalists { gap: var(--tlsc-s-16); }
+  .tlsc-root .tlsc-journey-finalists__title { font-size: 20px; line-height: 24px; letter-spacing: -0.6px; }
+  /* Финалисты — карточки в ряд, кольцо % в левом верхнем углу */
+  .tlsc-journey-finalists__list { flex-direction: row; gap: var(--tlsc-s-16); margin: -11px -16px 0; padding: 11px 16px 0; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 16px; scrollbar-width: none; }
+  .tlsc-journey-finalist { flex: 1 0 153px; flex-direction: column; gap: var(--tlsc-s-8); border-right: 0; border-bottom: 2px solid transparent; scroll-snap-align: start; }
+  .tlsc-journey-finalist.is-active { border-bottom-color: var(--tlsc-accent); }
+  .tlsc-journey-finalist__media { width: 100%; height: auto; aspect-ratio: 172 / 167; }
+  .tlsc-journey-finalist__copy { padding: var(--tlsc-s-8) var(--tlsc-s-16) var(--tlsc-s-8) 0; }
+  .tlsc-journey-finalist__meta b { left: -16px; top: -11px; }
+  .tlsc-journey-result { flex-direction: column; gap: var(--tlsc-s-20); }
+  .tlsc-journey-result__image { flex: none; height: 230px; aspect-ratio: auto; }
+  .tlsc-journey-result__info { gap: var(--tlsc-s-16); }
+  .tlsc-journey-result__foot { flex-direction: column; align-items: stretch; gap: var(--tlsc-s-24); }
+  .tlsc-journey-result__foot .tlsc-match { flex: none; width: 100%; }
+
+  /* ----- Среда (дизайн 768) ----- */
+  .tlsc-territory { padding: var(--tlsc-s-32) 0; }
+  .tlsc-territory__words { gap: var(--tlsc-s-48); min-height: 63px; }
+  .tlsc-root .tlsc-territory__word--prev, .tlsc-root .tlsc-territory__word--next { font-size: 56px; line-height: 50px; }
+  .tlsc-root .tlsc-territory__word--active { font-size: var(--tlsc-display-l); line-height: var(--tlsc-display-l-lh); }
+  .tlsc-territory__visual { height: 257px; }
+  .tlsc-root :is(.tlsc-territory__machine, .tlsc-territory__ghost) { max-width: min(329px, 100%); }
+  .tlsc-territory__bottom { grid-template-columns: minmax(0, 1fr); gap: var(--tlsc-s-16); }
+  .tlsc-territory__model { gap: var(--tlsc-s-8); }
+  .tlsc-territory__statement { order: 1; align-items: flex-start; gap: var(--tlsc-s-8); text-align: left; }
+  .tlsc-territory__link { order: 2; width: 100%; }
+}
+
+/* ---------- <768: дизайн 393 ---------- */
+@media (max-width: 767px) {
+  .tlsc-journey__steps { grid-template-columns: minmax(0, 1fr); }
+  .tlsc-journey-finalist { flex: 0 0 153px; }
+  .tlsc-compare-card { flex-direction: column; align-items: stretch; }
+  .tlsc-compare-card__info { padding: 0; }
+  .tlsc-metric > span:not(.tlsc-metric__value), .tlsc-profile-stat span { width: 112px; }
+  .tlsc-checks { grid-template-columns: minmax(0, 1fr); gap: var(--tlsc-s-12); }
+  .tlsc-priority-scale, .tlsc-priority__choices { width: min(240px, 64%); }
+  .tlsc-priority-scale { font-size: var(--tlsc-body-s); }
+}

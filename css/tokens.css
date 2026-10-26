@@ -1,0 +1,73 @@
+/* Токены дизайна. Остальные файлы используют только var(--tlsc-*). */
+:root { --site-header-h: 124px; } /* уточняется из js/enhance.js */
+
+.tlsc-root {
+  /* Цвет */
+  --tlsc-accent: #d2ff00;              /* background/sentiment/accent, control/primary */
+  --tlsc-text: #171717;                /* content/base/primary */
+  --tlsc-text-secondary: #737373;      /* content/base/secondary */
+  --tlsc-text-tertiary: #a3a3a3;       /* content/base/tertiary */
+  --tlsc-negative: #ef4444;            /* sentiment/negative */
+  --tlsc-positive: #22c55e;            /* sentiment/positive */
+  --tlsc-focus: #3b82f6;               /* ссылка «Открыть модель» в сравнении, фокус */
+  --tlsc-surface: #ffffff;             /* background/base/secondary */
+  --tlsc-surface-muted: #f5f5f5;       /* background/base/primary */
+  --tlsc-control: rgba(82, 82, 82, 0.08);    /* control/neutral/neutral-secondary */
+  --tlsc-control-hover: rgba(82, 82, 82, 0.12); /* State=Hover у Button/Select/Checkbox */
+  --tlsc-border: rgba(82, 82, 82, 0.16);     /* border/base/neutral */
+  --tlsc-border-strong: #0a0a0a;             /* border/base/base */
+  --tlsc-line: rgba(26, 26, 26, 0.16);       /* background/static/static-black-subtle */
+  --tlsc-black: #000000;                     /* background/static/static-black */
+  --tlsc-overlay: rgba(23, 23, 23, 0.56);
+  --tlsc-shadow: 0 12px 40px rgba(23, 23, 23, 0.16);
+
+  /* Типографика */
+  --tlsc-font: Inter, Arial, sans-serif;
+  --tlsc-font-display: "Roboto Flex Custom", "Roboto Flex", Arial, sans-serif;
+  --tlsc-display-xl: 120px;  --tlsc-display-xl-lh: 118px;
+  --tlsc-display-l: 72px;    --tlsc-display-l-lh: 63px;
+  --tlsc-display-s: 56px;    --tlsc-display-s-lh: 50px;   --tlsc-display-s-ls: -0.6px;
+  --tlsc-h2: 40px;           --tlsc-h2-lh: 38px;          --tlsc-h2-ls: -1.2px;
+  --tlsc-h4: 24px;           --tlsc-h4-lh: 28px;          --tlsc-h4-ls: -0.8px;
+  --tlsc-body-l: 18px;       --tlsc-body-l-lh: 24px;
+  --tlsc-body-m: 16px;       --tlsc-body-m-lh: 22px;
+  --tlsc-body-s: 14px;       --tlsc-body-s-lh: 18px;      --tlsc-body-s-ls: -0.3px;
+  --tlsc-caption: 12px;      --tlsc-caption-lh: 14px;
+  --tlsc-ls: -0.4px;
+
+  /* Размеры и отступы */
+  --tlsc-s-4: 4px; --tlsc-s-8: 8px; --tlsc-s-12: 12px; --tlsc-s-16: 16px; --tlsc-s-20: 20px;
+  --tlsc-s-24: 24px; --tlsc-s-32: 32px; --tlsc-s-48: 48px; --tlsc-s-72: 72px; --tlsc-s-90: 90px;
+  --tlsc-btn-h: 56px;
+  --tlsc-hit: 44px;
+  --tlsc-badge-h: 24px;
+  --tlsc-mobile-bar-h: 72px;
+  --tlsc-dur: 200ms;
+  --tlsc-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  /* Совместимость с модалкой «Ваш подбор» (css/passport.css) */
+  --tlsc-ink: #171717; --tlsc-ink-raised: #262626; --tlsc-on-ink: #ffffff;
+  --tlsc-on-ink-secondary: #bdbdb6; --tlsc-on-ink-tertiary: #9a9a93;
+  --tlsc-ok-ink: #3f4d00; --tlsc-accent-hover: #c2eb00;
+  --tlsc-radius: 0; --tlsc-radius-sm: 0; --tlsc-radius-lg: 0;
+  --tlsc-hit-min: 44px; --tlsc-control-h: 48px;
+  --tlsc-fs-eyebrow: 11px; --tlsc-track-eyebrow: 0.1em; --tlsc-fs-meta: 12px; --tlsc-fs-small: 13px; --tlsc-fs-body: 15px; --tlsc-fs-h3: 18px;
+  --tlsc-space-1: 4px; --tlsc-space-2: 8px; --tlsc-space-3: 12px; --tlsc-space-4: 16px; --tlsc-space-5: 24px; --tlsc-space-6: 32px; --tlsc-space-7: 48px;
+}
+
+/* Брейкпоинты по дизайну: 1920 · 1440 (между ними — плавно, без масштабирования) · 768 · 393.
+   ≥1200 — две колонки (дизайны 1440/1920); <1200 — одна колонка, параметры в шторке «Фильтры» (дизайны 768/393). */
+.tlsc-root {
+  /* 1440 → 1920: контент левой колонки 467 → 547 (чипы в одну строку), фото 481×376 → 573×448, «Финальный выбор» 370 → 580 */
+  --tlsc-left: clamp(467px, calc(467px + (100vw - 1440px) * 0.1667), 547px);
+  --tlsc-photo-w: clamp(481px, calc(481px + (100vw - 1440px) * 0.1917), 573px);
+  --tlsc-final-left: clamp(370px, calc(370px + (100vw - 1440px) * 0.4375), 580px);
+  --tlsc-final-gap: clamp(20px, calc(20px + (100vw - 1440px) * 0.025), 32px);
+}
+@media (max-width: 1439px) {
+  .tlsc-root { --tlsc-photo-w: 440px; }
+}
+@media (max-width: 1199px) {
+  /* Дизайн 768/393: заголовки 40/38, цена и название 40/38, совпадение 32 */
+  .tlsc-root { --tlsc-display-s: 40px; --tlsc-display-s-lh: 38px; --tlsc-h2: 32px; --tlsc-h2-lh: 30px; --tlsc-h2-ls: -0.8px; }
+}

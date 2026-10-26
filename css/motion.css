@@ -1,0 +1,92 @@
+/* Анимации смены модели, цен, цифр и характеристик.
+   Классы ставит tlsc.js: is-switching-out (≈180 мс) → новая модель → is-switching-in (≈560 мс), is-pulse, is-media-switching.
+   Цифры прокручивает js/enhance.js (countUp), радар профиля — morphProfile. */
+.tlsc-root {
+  --tlsc-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --tlsc-rise: tlsc-rise 520ms var(--tlsc-ease-out) both;
+}
+@keyframes tlsc-rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes tlsc-slide { from { opacity: 0; transform: translateX(32px) scale(0.98); } to { opacity: 1; transform: none; } }
+@keyframes tlsc-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes tlsc-grow { from { width: 0; } }
+@keyframes tlsc-flash { 0% { background-color: rgba(210, 255, 0, 0.5); } 100% { background-color: transparent; } }
+
+/* ---- Смена модели: уход ---- */
+.tlsc-result :is(.tlsc-result__bar, .tlsc-result__heading, .tlsc-match, .tlsc-stage__image, .tlsc-scenario-strip, .tlsc-variants, .tlsc-price__main, .tlsc-stage__thumbs .tlsc-gallery) {
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+.tlsc-result.is-switching-out :is(.tlsc-result__bar, .tlsc-result__heading, .tlsc-match, .tlsc-scenario-strip, .tlsc-variants, .tlsc-price__main, .tlsc-gallery) { opacity: 0; transform: translateY(-6px); }
+.tlsc-result.is-switching-out .tlsc-stage__image { opacity: 0; transform: translateX(-32px) scale(0.98); }
+
+/* ---- Смена модели: появление, по очереди ---- */
+.tlsc-result.is-switching-in .tlsc-result__bar { animation: var(--tlsc-rise); }
+.tlsc-result.is-switching-in .tlsc-result__heading h2 { animation: var(--tlsc-rise); animation-delay: 40ms; }
+.tlsc-result.is-switching-in .tlsc-result__heading p { animation: var(--tlsc-rise); animation-delay: 90ms; }
+.tlsc-result.is-switching-in .tlsc-match { animation: var(--tlsc-rise); animation-delay: 90ms; }
+.tlsc-result.is-switching-in .tlsc-stage__image { animation: tlsc-slide 560ms var(--tlsc-ease-out) both; animation-delay: 60ms; }
+.tlsc-result.is-switching-in .tlsc-gallery__item { animation: var(--tlsc-rise); }
+.tlsc-result.is-switching-in .tlsc-gallery__item:nth-child(2) { animation-delay: 40ms; }
+.tlsc-result.is-switching-in .tlsc-gallery__item:nth-child(3) { animation-delay: 80ms; }
+.tlsc-result.is-switching-in .tlsc-gallery__item:nth-child(4) { animation-delay: 120ms; }
+.tlsc-result.is-switching-in .tlsc-gallery__item:nth-child(n+5) { animation-delay: 160ms; }
+.tlsc-result.is-switching-in .tlsc-scenario-strip .tlsc-badge { animation: var(--tlsc-rise); }
+.tlsc-result.is-switching-in .tlsc-scenario-strip .tlsc-badge:nth-child(2) { animation-delay: 50ms; }
+.tlsc-result.is-switching-in .tlsc-scenario-strip .tlsc-badge:nth-child(3) { animation-delay: 100ms; }
+.tlsc-result.is-switching-in .tlsc-scenario-strip .tlsc-badge:nth-child(4) { animation-delay: 150ms; }
+.tlsc-result.is-switching-in .tlsc-variants { animation: var(--tlsc-rise); animation-delay: 200ms; }
+.tlsc-result.is-switching-in .tlsc-price__main { animation: var(--tlsc-rise); animation-delay: 140ms; }
+
+/* Смена фото в галерее */
+.tlsc-result.is-media-switching .tlsc-stage__image { opacity: 0.2; transition-duration: 140ms; }
+.tlsc-stage__image { will-change: opacity, transform; }
+
+/* Та же модель, новые цифры (is-pulse): подсветка цены и совпадения */
+.tlsc-result.is-pulse :is(.tlsc-price__main strong, .tlsc-match__value) { animation: tlsc-flash 700ms ease-out; }
+
+/* ---- Характеристики: линии тянутся к новому значению ---- */
+.tlsc-metric > i b, .tlsc-profile-stat i b { transition: width 700ms var(--tlsc-ease-out); }
+.tlsc-line::before { transition: width 700ms var(--tlsc-ease-out); }
+.tlsc-profile-stat i b { animation: tlsc-grow 700ms var(--tlsc-ease-out) both; } /* легенда профиля перерисовывается — растим с нуля */
+.tlsc-profile-stat:nth-child(2) i b { animation-delay: 40ms; }
+.tlsc-profile-stat:nth-child(3) i b { animation-delay: 80ms; }
+.tlsc-profile-stat:nth-child(4) i b { animation-delay: 120ms; }
+.tlsc-profile-stat:nth-child(5) i b { animation-delay: 160ms; }
+.tlsc-profile__dots circle { transition: cx 600ms var(--tlsc-ease-out), cy 600ms var(--tlsc-ease-out); }
+.tlsc-budget input[type='range'] { transition: background-size 120ms linear; }
+
+/* Вкладки: панель появляется */
+.tlsc-panel.is-active { animation: tlsc-fade 280ms ease both; }
+.tlsc-panel.is-active .tlsc-metric { animation: var(--tlsc-rise); }
+.tlsc-panel.is-active .tlsc-metric:nth-child(2) { animation-delay: 40ms; }
+.tlsc-panel.is-active .tlsc-metric:nth-child(3) { animation-delay: 80ms; }
+.tlsc-panel.is-active .tlsc-metric:nth-child(4) { animation-delay: 120ms; }
+
+/* Сравнение: строки таблицы и карточка при смене альтернативы */
+.tlsc-compare-row { animation: var(--tlsc-rise); }
+.tlsc-compare-row:nth-child(2) { animation-delay: 40ms; }
+.tlsc-compare-row:nth-child(3) { animation-delay: 80ms; }
+.tlsc-compare-row:nth-child(4) { animation-delay: 120ms; }
+.tlsc-compare-row:nth-child(5) { animation-delay: 160ms; }
+.tlsc-compare-card.is-swap .tlsc-compare-card__image img { animation: tlsc-slide 520ms var(--tlsc-ease-out) both; }
+.tlsc-compare-card.is-swap .tlsc-compare-card__info > * { animation: var(--tlsc-rise); }
+.tlsc-compare-card.is-swap .tlsc-compare-card__info > :nth-child(2) { animation-delay: 60ms; }
+.tlsc-compare-card.is-swap .tlsc-compare-card__info > :nth-child(3) { animation-delay: 120ms; }
+.tlsc-compare-verdict.is-swap { animation: var(--tlsc-rise); animation-delay: 120ms; }
+
+/* Воронка и финалисты */
+.tlsc-journey-finalist { animation: var(--tlsc-rise); }
+.tlsc-journey-finalist:nth-child(2) { animation-delay: 60ms; }
+.tlsc-journey-finalist:nth-child(3) { animation-delay: 120ms; }
+.tlsc-journey-finalist:nth-child(4) { animation-delay: 180ms; }
+.tlsc-journey-finalist__meta b { transition: background 600ms var(--tlsc-ease-out); }
+.tlsc-journey-result.is-preview-in .tlsc-journey-result__image img { animation: tlsc-slide 520ms var(--tlsc-ease-out) both; }
+.tlsc-journey-result.is-preview-in .tlsc-journey-result__copy > * { animation: var(--tlsc-rise); }
+.tlsc-journey-result.is-preview-in .tlsc-journey-result__copy > :nth-child(2) { animation-delay: 40ms; }
+.tlsc-journey-result.is-preview-in .tlsc-journey-result__copy > :nth-child(3) { animation-delay: 80ms; }
+.tlsc-journey-result.is-preview-in .tlsc-journey-result__copy > :nth-child(4) { animation-delay: 120ms; }
+.tlsc-journey-result.is-preview-in .tlsc-journey-result__foot { animation: var(--tlsc-rise); animation-delay: 160ms; }
+.tlsc-journey-step.is-changed .tlsc-journey-step__count strong { animation: tlsc-flash 700ms ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .tlsc-root *, .tlsc-root *::before, .tlsc-root *::after { animation: none !important; transition: none !important; }
+}

@@ -1,0 +1,71 @@
+/* «Как мы пришли к этому выбору» + «Финальный выбор». */
+.tlsc-journey { padding: var(--tlsc-s-90) 0 var(--tlsc-s-72); }
+.tlsc-journey.is-no-result { display: none; }
+.tlsc-journey__container { display: flex; flex-direction: column; gap: var(--tlsc-s-48); }
+
+/* 5 шагов воронки */
+.tlsc-journey__steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--tlsc-s-8); }
+.tlsc-journey-step { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: var(--tlsc-s-16); padding: 0 var(--tlsc-s-24) 22px; border: 1px solid var(--tlsc-border); } /* 202 с рамкой, как в дизайне */
+.tlsc-journey-step + .tlsc-journey-step::before { /* стрелка-связка между карточками */
+  content: ''; position: absolute; left: -11px; top: 82px; width: 11px; height: 42px; z-index: 1;
+  background: var(--tlsc-surface); border-top: 1px solid var(--tlsc-border); border-bottom: 1px solid var(--tlsc-border); }
+.tlsc-journey-step + .tlsc-journey-step::after {
+  content: ''; position: absolute; left: -17.5px; top: 91px; width: 24px; height: 24px; z-index: 2; background: var(--tlsc-text);
+  -webkit-mask: url('../assets/icons/chevron-right.svg') center / 24px no-repeat; mask: url('../assets/icons/chevron-right.svg') center / 24px no-repeat; }
+.tlsc-journey-step__top { display: flex; align-items: flex-start; gap: var(--tlsc-s-4); }
+@media (max-width: 1719px) and (min-width: 1200px) { .tlsc-journey-step__top { flex-direction: column; } } /* дизайн 1440: номер над названием */
+.tlsc-journey-step__top :is(b, span) { padding: var(--tlsc-s-8) var(--tlsc-s-12); background: var(--tlsc-surface-muted); font-weight: 500; white-space: nowrap; }
+.tlsc-journey-step--final .tlsc-journey-step__top :is(b, span) { background: var(--tlsc-accent); }
+.tlsc-journey-step__count { display: flex; align-items: flex-end; gap: var(--tlsc-s-8); white-space: nowrap; }
+.tlsc-journey-step__count strong { font-size: var(--tlsc-display-s); line-height: var(--tlsc-display-s-lh); letter-spacing: var(--tlsc-display-s-ls); }
+.tlsc-journey-step__count em { font-weight: 500; color: var(--tlsc-text-secondary); }
+.tlsc-journey-step__delta { display: inline-flex; align-items: center; height: var(--tlsc-badge-h); padding: 0 var(--tlsc-s-8); background: var(--tlsc-surface-muted);
+  font-size: var(--tlsc-body-s); line-height: var(--tlsc-body-s-lh); letter-spacing: var(--tlsc-body-s-ls); font-weight: 500; }
+.tlsc-journey-step__delta:empty { display: none; }
+.tlsc-journey-step p { font-size: var(--tlsc-body-s); line-height: var(--tlsc-body-s-lh); letter-spacing: var(--tlsc-body-s-ls); font-weight: 500; color: var(--tlsc-text-secondary); }
+
+/* Финальный выбор: список слева, выбранный финалист справа */
+.tlsc-journey__final { display: grid; grid-template-columns: var(--tlsc-final-left) minmax(0, 1fr); gap: 0; align-items: start; } /* 580 | 1160 (1920) · 370 | 890 (1440) */
+.tlsc-journey-finalists { display: flex; flex-direction: column; gap: var(--tlsc-s-24); padding-right: 0; }
+.tlsc-root .tlsc-journey-finalists__title { font-family: var(--tlsc-font); font-style: normal; font-weight: 600; font-size: 24px; line-height: 28px; letter-spacing: -0.8px; text-transform: none; }
+.tlsc-journey-finalists__list { display: flex; flex-direction: column; gap: var(--tlsc-s-16); }
+.tlsc-journey-finalists__empty { color: var(--tlsc-text-secondary); }
+
+.tlsc-journey-finalist { position: relative; display: flex; align-items: flex-start; gap: var(--tlsc-s-16); width: 100%; padding: 0; border: 0; border-right: 2px solid transparent; background: none; text-align: left; cursor: pointer;
+  transition: background-color var(--tlsc-dur); }
+.tlsc-journey-finalist:hover { background: var(--tlsc-surface-muted); }
+.tlsc-journey-finalist.is-active { background: var(--tlsc-surface-muted); border-right-color: var(--tlsc-accent); }
+.tlsc-journey-finalist__rank, .tlsc-journey-finalist__arrow, .tlsc-journey-finalist__bar { display: none; }
+.tlsc-journey-finalist__media { flex: none; display: grid; place-items: center; width: 99px; height: 96px; overflow: hidden; border: 1px solid var(--tlsc-border); background: var(--tlsc-surface); }
+.tlsc-journey-finalist__media img { width: 100%; height: 100%; object-fit: contain; }
+.tlsc-journey-finalist__media i { color: var(--tlsc-text-tertiary); font-size: var(--tlsc-body-s); }
+.tlsc-journey-finalist__copy { display: flex; flex-direction: column; align-items: flex-start; gap: var(--tlsc-s-4); flex: 1; min-width: 0; padding: var(--tlsc-s-8) var(--tlsc-s-16) var(--tlsc-s-8) 0; }
+.tlsc-journey-finalist__copy small { display: inline-flex; align-items: center; height: var(--tlsc-badge-h); padding: 0 var(--tlsc-s-8); background: var(--tlsc-surface-muted); border-radius: 4px;
+  font-size: var(--tlsc-body-s); line-height: var(--tlsc-body-s-lh); font-weight: 500; text-transform: uppercase; }
+.tlsc-journey-finalist.is-active .tlsc-journey-finalist__copy small, .tlsc-journey-finalist:hover .tlsc-journey-finalist__copy small { background: var(--tlsc-surface); }
+.tlsc-journey-finalist.is-winner .tlsc-journey-finalist__copy small { gap: var(--tlsc-s-4); padding-left: var(--tlsc-s-4); border-radius: 0; background: var(--tlsc-accent); text-transform: none; }
+.tlsc-journey-finalist.is-winner .tlsc-journey-finalist__copy small::before { content: ''; width: 24px; height: 24px; background: currentColor;
+  -webkit-mask: url('../assets/icons/check.svg') center / 24px no-repeat; mask: url('../assets/icons/check.svg') center / 24px no-repeat; }
+.tlsc-root .tlsc-journey-finalist__copy strong { font-family: var(--tlsc-font); font-style: normal; font-weight: 500; font-size: var(--tlsc-body-m); line-height: var(--tlsc-body-m-lh); letter-spacing: var(--tlsc-ls); text-transform: none; }
+.tlsc-journey-finalist__meta { display: flex; }
+.tlsc-journey-finalist__meta em { font-size: var(--tlsc-body-l); line-height: var(--tlsc-body-l-lh); font-weight: 600; }
+/* % совпадения — кольцо 60px поверх фото (Progress) */
+.tlsc-journey-finalist__meta b { position: absolute; left: -16px; top: 44px; display: grid; place-items: center; width: 60px; height: 60px; border-radius: 50%;
+  background: radial-gradient(closest-side, var(--tlsc-surface) 88%, transparent 89% 100%), conic-gradient(var(--tlsc-accent) calc(var(--p, 0) * 1%), var(--tlsc-line) 0);
+  border: 4px solid var(--tlsc-surface); font-size: var(--tlsc-body-l); line-height: var(--tlsc-body-l-lh); font-weight: 600; letter-spacing: var(--tlsc-ls); }
+
+/* Выбранный финалист */
+.tlsc-journey-result { display: flex; gap: var(--tlsc-final-gap); min-width: 0; }
+.tlsc-journey-result.is-no-result { display: none; }
+.tlsc-journey-result__image { flex: 1 1 50%; display: grid; place-items: center; height: 484px; overflow: hidden; border: 1px solid var(--tlsc-border); } /* 564×484 (1920) · 435×484 (1440) */
+.tlsc-journey-result__image img { width: 100%; height: 100%; object-fit: contain; }
+.tlsc-journey-result__info { flex: 1 1 50%; display: flex; flex-direction: column; justify-content: space-between; gap: var(--tlsc-s-24); min-width: 0; }
+.tlsc-journey-result__copy { display: flex; flex-direction: column; gap: var(--tlsc-s-16); }
+.tlsc-journey-result__bar { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--tlsc-s-16); }
+.tlsc-journey-result h3 { font-size: var(--tlsc-h2); line-height: var(--tlsc-h2-lh); letter-spacing: var(--tlsc-h2-ls); }
+.tlsc-journey-result__price { font-size: var(--tlsc-h2); line-height: var(--tlsc-h2-lh); letter-spacing: var(--tlsc-h2-ls); white-space: nowrap; }
+.tlsc-journey-result__copy > p { font-weight: 500; color: var(--tlsc-text-secondary); }
+/* Нижний ряд: совпадение слева, «Открыть модель» справа */
+.tlsc-journey-result__foot { display: flex; align-items: center; justify-content: space-between; gap: var(--tlsc-s-16); }
+.tlsc-journey-result__foot .tlsc-match { flex: 0 1 259px; width: auto; min-width: 0; }
+.tlsc-journey-result__foot .tlsc-btn { flex: none; }

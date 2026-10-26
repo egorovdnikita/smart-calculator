@@ -1,0 +1,55 @@
+/* Баннер среды «СНЕГ · ДОРОГА · ЛЕС». */
+.tlsc-territory { padding: var(--tlsc-s-72) 0; }
+.tlsc-territory.is-empty { display: none; }
+.tlsc-territory__container { display: flex; flex-direction: column; gap: var(--tlsc-s-24); }
+.tlsc-territory__stage { position: relative; display: flex; flex-direction: column; padding-top: var(--tlsc-s-24); border: 1px solid var(--tlsc-border); overflow: hidden; }
+
+.tlsc-territory__words { display: flex; align-items: center; justify-content: center; gap: var(--tlsc-s-72); min-height: var(--tlsc-display-xl-lh); text-transform: uppercase; white-space: nowrap; }
+.tlsc-root .tlsc-territory__word { padding: 0; border: 0; background: none; letter-spacing: 0; font-family: var(--tlsc-font-display); font-style: italic; font-weight: 700; }
+.tlsc-territory__word--far-prev, .tlsc-territory__word--far-next { display: none; }
+.tlsc-root .tlsc-territory__word--prev, .tlsc-root .tlsc-territory__word--next { font-size: var(--tlsc-display-l); line-height: var(--tlsc-display-l-lh); color: var(--tlsc-text-tertiary); cursor: pointer; transition: color var(--tlsc-dur); }
+.tlsc-territory__word--prev:hover, .tlsc-territory__word--next:hover { color: var(--tlsc-text); }
+.tlsc-territory__word--prev span, .tlsc-territory__word--next span { font: inherit; }
+.tlsc-territory__word--active { font-size: var(--tlsc-display-xl); line-height: var(--tlsc-display-xl-lh); color: var(--tlsc-text); }
+
+/* Сцена: фон на всю ширину, прижат к низу — по бокам не обрезается; техника целиком, стоит на нижнем крае.
+   При смене — анимация (классы ставит tlsc.js) */
+.tlsc-territory__visual { position: relative; height: 380px; }
+.tlsc-territory__backdrop { position: absolute; inset: 0; overflow: hidden; background-color: var(--tlsc-surface); background-repeat: no-repeat; background-size: 100% auto; background-position: center bottom;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 32%); mask-image: linear-gradient(to bottom, transparent, #000 32%); } /* верх фона растворяется в белом */
+.tlsc-root :is(.tlsc-territory__machine, .tlsc-territory__ghost) { position: absolute; left: 50%; bottom: 0; width: auto; height: 100%; max-width: min(632px, 92%); object-fit: contain; object-position: center bottom; transform: translateX(-50%); z-index: 1; }
+.tlsc-territory__ghost:not([hidden]) { display: block; }
+.tlsc-territory__machine.is-fallback:not(.is-cutout) { mix-blend-mode: multiply; }
+.tlsc-territory__ghost { mix-blend-mode: multiply; pointer-events: none; }
+
+@keyframes tlsc-machine-in { from { opacity: 0; transform: translateX(calc(-50% + 96px)); } to { opacity: 1; transform: translateX(-50%); } }
+@keyframes tlsc-machine-out { from { opacity: 1; transform: translateX(-50%); } to { opacity: 0; transform: translateX(calc(-50% - 96px)); } }
+@keyframes tlsc-backdrop-in { from { opacity: 0.15; transform: scale(1.04); } to { opacity: 1; transform: none; } }
+@keyframes tlsc-word-in { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes tlsc-side-in { from { opacity: 0; } to { opacity: 1; } }
+.tlsc-territory.is-machine-switching .tlsc-territory__machine { animation: tlsc-machine-in 720ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.tlsc-territory.is-machine-switching .tlsc-territory__ghost { animation: tlsc-machine-out 520ms cubic-bezier(0.7, 0, 0.84, 0) both; }
+.tlsc-territory.is-backdrop-switching .tlsc-territory__backdrop { animation: tlsc-backdrop-in 760ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.tlsc-territory.is-terrain-switching .tlsc-territory__word--active { animation: tlsc-word-in 560ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+.tlsc-territory.is-terrain-switching :is(.tlsc-territory__word--prev, .tlsc-territory__word--next) { animation: tlsc-side-in 560ms ease both 120ms; }
+.tlsc-territory.is-machine-switching :is(.tlsc-territory__model, .tlsc-territory__statement) { animation: tlsc-word-in 520ms cubic-bezier(0.16, 1, 0.3, 1) both 80ms; }
+
+.tlsc-territory__bottom { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: var(--tlsc-s-12); }
+@media (min-width: 1200px) {
+  /* Десктоп: слова 118 + сцена 380, техника 493 выходит вверх на слова; подписи и кнопка — поверх фона, отступ 24 */
+  .tlsc-territory__container { gap: 0; }
+  .tlsc-territory__stage { overflow: visible; }
+  .tlsc-territory__visual { z-index: 1; }
+  .tlsc-root :is(.tlsc-territory__machine, .tlsc-territory__ghost) { height: 493px; }
+  .tlsc-territory__bottom { position: relative; z-index: 2; margin: -101px 1px 0; padding: 0 24px 24px; min-height: 101px; align-items: end; }
+  .tlsc-territory__link.tlsc-btn--neutral { background: var(--tlsc-surface); }
+  .tlsc-territory__link.tlsc-btn--neutral:hover { background: var(--tlsc-surface-muted); }
+}
+.tlsc-territory__model { display: flex; flex-direction: column; gap: var(--tlsc-s-16); min-width: 0; }
+.tlsc-territory__model-meta { display: flex; gap: var(--tlsc-s-8); font-weight: 500; color: var(--tlsc-text-secondary); text-transform: uppercase; }
+.tlsc-territory__model-meta :is(span, em) { font: inherit; }
+.tlsc-territory__model strong, .tlsc-territory__statement strong { font-size: var(--tlsc-h2); line-height: var(--tlsc-h2-lh); letter-spacing: var(--tlsc-h2-ls); }
+.tlsc-territory__model strong { text-transform: uppercase; }
+.tlsc-territory__statement { display: flex; flex-direction: column; align-items: flex-end; gap: var(--tlsc-s-16); text-align: right; }
+.tlsc-territory__statement span { font-weight: 500; color: var(--tlsc-text-secondary); text-transform: lowercase; }
+.tlsc-territory__statement span::first-letter { text-transform: uppercase; }
