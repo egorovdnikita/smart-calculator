@@ -11,7 +11,7 @@
 2. Монтаж. Плавная камера, кольца кликов по измеренным центрам элементов, фон GitHub Dark,
    обводка #3d444d, скругление 20. Последний кадр совпадает с первым — петля без стыка.
 
-Нужны playwright (с chromium), pillow, numpy, imageio-ffmpeg. Итог — ПАПКА/smart-calculator-demo.webp.
+Нужны playwright (с chromium), pillow, numpy. Итог — ПАПКА/smart-calculator-demo.webp.
 """
 import argparse, json, math, pickle, subprocess, sys, time
 from datetime import datetime
@@ -412,7 +412,6 @@ def compose_frame(folder, meta, i, card_mask, outer_mask, border):
 
 
 def compose(folder, keys_only=False, out_fps=FPS, quality=70):
-    import imageio_ffmpeg
     meta = json.loads((folder / 'record.json').read_text())
     frames = meta['frames']
     sup = 3
@@ -427,25 +426,31 @@ def compose(folder, keys_only=False, out_fps=FPS, quality=70):
     key_frames = set(range(0, frames, FPS // 2)) | {frames - 1}
     out = folder / 'smart-calculator-demo.webp'
     step = FPS // out_fps
-    encoder = None if keys_only else subprocess.Popen([
-        imageio_ffmpeg.get_ffmpeg_exe(), '-y', '-v', 'error', '-f', 'rawvideo', '-pix_fmt', 'rgba',
-        '-s', f'{OUT_W}x{OUT_H}', '-r', str(out_fps), '-i', '-', '-c:v', 'libwebp_anim',
-        '-lossless', '0', '-quality', str(quality), '-compression_level', '6', '-preset', 'picture',
-        '-loop', '0', str(out)], stdin=subprocess.PIPE)
-    try:
-        for i in (sorted(key_frames) if keys_only else range(0, frames, step)):
+    indices = sorted(key_frames) if keys_only else list(range(0, frames, step))
+
+    def stream():
+        for i in indices:
             frame = compose_frame(folder, meta, i, card_mask, outer_mask, border)
-            if encoder:
-                encoder.stdin.write(frame.tobytes())
             if i in key_frames:
                 frame.save(keys_dir / f'key-{i / FPS:05.2f}.png')
             if i % (FPS * 5) == 0:
                 print(f'Монтаж: {i / FPS:.0f}/{frames / FPS:.0f} с', flush=True)
-    finally:
-        if encoder:
-            encoder.stdin.close()
-    if encoder and encoder.wait() != 0:
-        raise RuntimeError('Не удалось записать WebP')
+            yield frame
+
+    if keys_only:
+        for _ in stream():
+            pass
+        return out
+    # Pillow вместо ffmpeg: нужен kmax. WebPAnimEncoder с потерями не обновляет пиксели, если разница
+    # меньше порога, и плавные затухания оставляют «призраки» старого текста. Ключевой кадр каждые
+    # 0,5 с смывает остатки. Кадры идут генератором — в памяти их не держим.
+    gen = stream()
+    first = next(gen)
+    stamps = [round(k * 1000 / out_fps) for k in range(len(indices) + 1)]
+    durations = [b - a for a, b in zip(stamps, stamps[1:])]
+    first.save(out, save_all=True, append_images=gen, duration=durations, loop=0, lossless=False,
+               quality=quality, method=4, kmin=out_fps // 2 - 1, kmax=out_fps // 2, allow_mixed=False,
+               background=(0, 0, 0, 0))
     return out
 
 
@@ -469,7 +474,7 @@ def main():
     ap.add_argument('--only-record', action='store_true')
     ap.add_argument('--only-compose', action='store_true')
     ap.add_argument('--keys-only', action='store_true')
-    ap.add_argument('--fps', type=int, default=30)   # 30 к/с: ≈16 МБ; 60 к/с даёт ≈28 МБ
+    ap.add_argument('--fps', type=int, default=30)   # 30 к/с: ≈18 МБ
     ap.add_argument('--quality', type=int, default=75)
     args = ap.parse_args()
     folder = Path(args.folder).resolve()
