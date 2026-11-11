@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Промо Smart Calculator для README: запись настоящего прототипа в Playwright и монтаж WebP.
+"""Промо smart-calculator для README: запись настоящего прототипа в Playwright и монтаж WebP.
 
 Запуск: python promo.py ПАПКА [--only-record | --only-compose] [--keys-only] [--fps 30] [--quality 75]
 

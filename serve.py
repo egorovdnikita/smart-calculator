@@ -3,6 +3,7 @@
 ?tlsc_api=product_details, корзина /local/cart/ajax) проксирует на исходный сайт (ORIGIN).
 Запуск: python3 serve.py [порт]  (по умолчанию 5173)"""
 import http.server, os, re, sys, urllib.request, urllib.error
+from urllib.parse import unquote, urlsplit
 ORIGIN = 'https://turbolemons.ru'
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -34,11 +35,20 @@ class H(http.server.SimpleHTTPRequestHandler):
             self.send_header('Set-Cookie', c)
         self.send_header('Content-Length', str(len(data)))
         self.end_headers(); self.wfile.write(data)
+    def _private(self):
+        path = unquote(urlsplit(self.path).path)
+        target = os.path.realpath(os.path.join(ROOT, path.lstrip("/")))
+        return any(part.startswith(".") for part in path.split("/") if part) or os.path.commonpath([ROOT, target]) != ROOT
+    def do_HEAD(self):
+        if self._private(): return self.send_error(404)
+        return super().do_HEAD()
     def do_GET(self):
+        if self._private(): return self.send_error(404)
         if self.path.split('?', 1)[0] in self.BLOCKED: return self.do_POST()
         return super().do_GET() if self._local() else self._proxy()
     BLOCKED = ('/local/cart/ajax/submit.php', '/local/cart/ajax/hit.php')  # заказ и аналитика — не из прототипа
     def do_POST(self):
+        if self._private(): return self.send_error(404)
         n = int(self.headers.get('Content-Length', 0) or 0)
         body = self.rfile.read(n) if n else None
         if self.path.split('?', 1)[0] in self.BLOCKED:
@@ -51,7 +61,7 @@ class H(http.server.SimpleHTTPRequestHandler):
 port = int(sys.argv[1]) if len(sys.argv) > 1 else 5173
 for p in range(port, port + 20):  # порт занят — берём следующий свободный
     try:
-        srv = http.server.ThreadingHTTPServer(('', p), H)
+        srv = http.server.ThreadingHTTPServer(('127.0.0.1', p), H)
         break
     except OSError:
         continue

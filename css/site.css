@@ -6,3 +6,6 @@
 /* WebKit (Safari, Chrome на iOS, Telegram): text-rendering: optimizeLegibility / geometricPrecision из стилей шапки
    отключает оси вариативного Roboto Flex — шрифт рисуется тонким. В Chrome/Blink визуально ничего не меняется. */
 html body, html body *, html body *::before, html body *::after { text-rendering: auto !important; }
+
+/* Каноническое имя проекта вместо логотипа исходного сайта. */
+.project-name { font: 700 18px/1.2 Arial, sans-serif; white-space: nowrap; color: inherit; }

@@ -1,4 +1,4 @@
-# Smart Calculator — паспорт проекта
+# smart-calculator — паспорт проекта
 
 ## Что это
 

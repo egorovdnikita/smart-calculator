@@ -14,7 +14,7 @@
 
 /* Сцена: фон на всю ширину, прижат к низу — по бокам не обрезается; техника целиком, стоит на нижнем крае.
    При смене — анимация (классы ставит tlsc.js) */
-.tlsc-territory__visual { position: relative; height: 380px; }
+.tlsc-territory__visual { position: relative; height: 380px; pointer-events: none; }
 .tlsc-territory__backdrop { position: absolute; inset: 0; overflow: hidden; background-color: var(--tlsc-surface); background-repeat: no-repeat; background-size: 100% auto; background-position: center bottom;
   -webkit-mask-image: linear-gradient(to bottom, transparent, #000 32%); mask-image: linear-gradient(to bottom, transparent, #000 32%); } /* верх фона растворяется в белом */
 .tlsc-root :is(.tlsc-territory__machine, .tlsc-territory__ghost) { position: absolute; left: 50%; bottom: 0; width: auto; height: 100%; max-width: min(632px, 92%); object-fit: contain; object-position: center bottom; transform: translateX(-50%); z-index: 1; }
